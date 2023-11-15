@@ -16,6 +16,15 @@ body {
   overflow-x: hidden;
 }
 
+@font-face {
+    font-family: "Manila";
+    src: url(../fonts/ManilaSansBld.otf) format("truetype");
+}
+span.knbases-logo { 
+    font-family: "Manila", Verdana, Tahoma;
+    font-size: 1.4em;
+}
+
 .container, .container-fluid {
   position: relative;
   padding: 0 30px;
