@@ -1572,7 +1572,7 @@ ol.list-ordered.style-5 li::before {
 }
 
 body {
-  color: #7C7C7C;
+  color: #3d3d3d;
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -2166,14 +2166,14 @@ i {
 }
 
 a {
-  color: rgba(18, 21, 24, 0.9);
+  color: rgb(27 77 221);
   text-decoration: none;
   -webkit-transition: linear 0.1s;
   transition: linear 0.1s;
 }
 
 a:hover {
-  color: #121518;
+  color: #2a87e4;
   text-decoration: none;
 }
 
