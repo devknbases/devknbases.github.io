@@ -1,5 +1,49 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M46.2565 1.16504H1.71533V46.8741H46.2565V1.16504Z" fill="#FFFAE1"/>
-<path d="M47.3481 47.9497H0.623535V0H47.3481V47.9497ZM2.80693 45.7091H45.1647V2.24064H2.80693V45.7091Z" fill="#25383F"/>
-<path d="M42.981 39.525H4.94629L23.9855 8.46973L42.981 39.525ZM13.156 34.8645H34.7715L23.9855 17.253L13.156 34.8645Z" fill="#EC595A"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 48 48"
+   fill="none"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="scroll.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="10.25"
+     inkscape:cx="24"
+     inkscape:cy="24.04878"
+     inkscape:window-width="1392"
+     inkscape:window-height="942"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3" />
+  <path
+     d="M46.2565 1.16504H1.71533V46.8741H46.2565V1.16504Z"
+     fill="#FFFAE1"
+     id="path1"
+     style="fill:#f4f4f4;fill-opacity:1" />
+  <path
+     d="M47.3481 47.9497H0.623535V0H47.3481V47.9497ZM2.80693 45.7091H45.1647V2.24064H2.80693V45.7091Z"
+     fill="#25383F"
+     id="path2" />
+  <path
+     d="M42.981 39.525H4.94629L23.9855 8.46973L42.981 39.525ZM13.156 34.8645H34.7715L23.9855 17.253L13.156 34.8645Z"
+     fill="#EC595A"
+     id="path3"
+     style="fill:#5b5b5b;fill-opacity:1" />
 </svg>
