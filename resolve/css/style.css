@@ -10081,7 +10081,7 @@ Why-choose CSS
     transform-origin: left;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    transition: transform 5s linear;
+    transition: transform 15s linear;
 }
 
 .deal-fast-area .tab-pane {
@@ -16538,7 +16538,7 @@ button:hover .HoverArrow__tipPath {
 }
 
 .app-pricing-item .item-label {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.2;
     margin-bottom: 18px;
 }
@@ -16582,7 +16582,9 @@ button:hover .HoverArrow__tipPath {
 
 .app-pricing-item ul li {
     font-size: 15px;
-    line-height: 40px;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 15px;
 }
 
 .app-pricing-item .btn {
@@ -16605,6 +16607,7 @@ button:hover .HoverArrow__tipPath {
 .app-pricing-question .question-text {
     color: var(--black);
     padding: 0 15px;
+    font-size: 14px;
 }
 
 .app-pricing-question .question-text a {
@@ -16835,7 +16838,6 @@ button:hover .HoverArrow__tipPath {
 .app-blog-slider .single-blog .item-text {
     font-size: 15px;
     line-height: 27px;
-    margin-bottom: 65px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -19886,7 +19888,9 @@ Contact Page Two CSS
 
 .single-post-item img {
     border-radius: 5px;
-    width: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .single-post-item .post-content {
