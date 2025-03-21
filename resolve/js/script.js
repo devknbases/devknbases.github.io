@@ -561,12 +561,12 @@
         myTimeout = setTimeout(function () {
           new bootstrap.Tab(elm[0]).show();
           loop_tab();
-        }, 5000);
+        }, 14000);
       } else {
         myTimeout = setTimeout(function () {
           new bootstrap.Tab($(".automated-tab .nav-link").first()[0]).show();
           loop_tab();
-        }, 5000);
+        }, 14000);
       }
     }
     loop_tab();
@@ -584,12 +584,12 @@
         myTimeout = setTimeout(function () {
           new bootstrap.Tab(elm[0]).show();
           loop_tab();
-        }, 5000);
+        }, 14000);
       } else {
         myTimeout = setTimeout(function () {
           new bootstrap.Tab($(".automated-tab2 .nav-link").first()[0]).show();
           loop_tab();
-        }, 5000);
+        }, 14000);
       }
     }
     loop_tab();

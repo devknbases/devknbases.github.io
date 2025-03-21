@@ -547,6 +547,14 @@ a {
     }
 }
 
+.app-features-area {
+    background-image: url("../images/features-area.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
 .mt-10 {
     margin-top: 10px;
 }
@@ -10040,7 +10048,7 @@ Why-choose CSS
 .deal-fast-area .info-card .nav-link.active .progress-bar {
     display: block;
     visibility: visible;
-    transform: scaleX(1);
+    transform: scaleX(1.06);
 }
 
 .deal-fast-area .info-card .nav-link .info-txt {
@@ -16092,6 +16100,11 @@ button:hover .HoverArrow__tipPath {
     bottom: -15%;
 }
 
+.app-feature-content {
+    height: 100vh;
+    padding-inline: 10%;
+}
+
 .app-feature-content .feature-title span {
     display: inline-block;
     position: relative;
@@ -16102,6 +16115,13 @@ button:hover .HoverArrow__tipPath {
     left: -4px;
     position: absolute;
     width: 222px;
+}
+
+.app-feature-content .features-items {
+    min-width: 70%;
+    background-color: rgb(219 215 255 / 76%);
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .app-feature-content .features-items .item {
@@ -16134,10 +16154,6 @@ button:hover .HoverArrow__tipPath {
     align-items: center;
 }
 
-.app-feature-content .features-items .item .item-content {
-    width: 70%;
-}
-
 .app-feature-content .features-items .item .item-content .item-title {
     font-weight: 700;
     font-size: 20px;
@@ -16149,6 +16165,7 @@ button:hover .HoverArrow__tipPath {
 .app-feature-content .features-items .item .item-content .item-text {
     font-size: 15px;
     line-height: 27px;
+    color: #454545;
 }
 
 .app-video-wrapp {
@@ -16158,7 +16175,7 @@ button:hover .HoverArrow__tipPath {
     background-repeat: no-repeat;
     border-radius: 5px;
     text-align: center;
-    padding: 150px 0;
+    padding: 140px 0;
     position: relative;
 }
 
@@ -16167,7 +16184,7 @@ button:hover .HoverArrow__tipPath {
     border-radius: 5px;
     width: 100%;
     height: 100%;
-    background: rgba(34, 56, 112, 0.1);
+    background: rgb(34 90 112 / 21%);
     position: absolute;
     left: 0;
     top: 0;
