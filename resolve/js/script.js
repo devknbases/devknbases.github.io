@@ -54,6 +54,15 @@
     }
   });
 
+  // hideOnTop
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $(".hideOnTop").fadeIn();
+    } else {
+      $(".hideOnTop").fadeOut();
+    }
+  });
+
   // scrollToTop
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
