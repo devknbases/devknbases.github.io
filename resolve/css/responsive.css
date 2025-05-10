@@ -2521,12 +2521,15 @@
     }
 
     .app-banner-content .banner-title {
-        font-size: 38px;
         width: 100%;
     }
 
     .app-banner-area {
         padding: 120px 0 100px;
+    }
+
+    .app-features-area {
+        padding: 100px 0;
     }
 
     .app-feature-content .feature-title {
@@ -2545,6 +2548,10 @@
 
     .app-features-images {
         margin-left: 0;
+    }
+
+    .app-video-wrapp {
+        padding: 80px 0;
     }
 
     .app-pricing-area {
@@ -3142,6 +3149,11 @@
 
     .comming-soon-4 .title-text {
         margin-bottom: 25px;
+    }
+
+    .app-video-wrapp {
+        padding: 80px 0;
+        height: 20px;
     }
 }
 
@@ -4533,6 +4545,10 @@
         margin-bottom: 40px;
     }
 
+    .app-features-area {
+        padding: 80px 0;
+    }
+
     .app-features-images {
         margin-bottom: 30px;
     }
@@ -4550,12 +4566,13 @@
         width: 20%;
     }
 
-    .app-feature-content .features-items .item .item-content {
-        width: 72%;
-    }
-
     .app-feature-content .features-items .item {
         gap: 25px;
+    }
+
+    .app-video-wrapp {
+        padding: 40px 80px 120px 80px;
+        height: 20px;
     }
 
     .app-pricing-area {

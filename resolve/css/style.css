@@ -16102,7 +16102,7 @@ button:hover .HoverArrow__tipPath {
 
 .app-feature-content {
     height: 100vh;
-    padding-inline: 10%;
+    padding-inline: 5%;
 }
 
 .app-feature-content .feature-title span {
@@ -16119,7 +16119,7 @@ button:hover .HoverArrow__tipPath {
 
 .app-feature-content .features-items {
     min-width: 70%;
-    background-color: rgb(219 215 255 / 76%);
+    background-color: rgb(219 215 255 / 88%);
     padding: 20px;
     border-radius: 5px;
 }
