@@ -2529,10 +2529,6 @@
         padding: 120px 0 100px;
     }
 
-    .app-features-area {
-        padding: 100px 0;
-    }
-
     .app-feature-content .feature-title {
         margin-bottom: 45px;
     }
@@ -2549,10 +2545,6 @@
 
     .app-features-images {
         margin-left: 0;
-    }
-
-    .app-video-wrapp {
-        padding: 180px 0;
     }
 
     .app-pricing-area {
@@ -4541,10 +4533,6 @@
         margin-bottom: 40px;
     }
 
-    .app-features-area {
-        padding: 80px 0;
-    }
-
     .app-features-images {
         margin-bottom: 30px;
     }
@@ -4568,10 +4556,6 @@
 
     .app-feature-content .features-items .item {
         gap: 25px;
-    }
-
-    .app-video-wrapp {
-        padding: 120px 0;
     }
 
     .app-pricing-area {

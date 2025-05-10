@@ -3559,7 +3559,7 @@ textarea:focus {
 }
 
 .main_logo {
-    height: 40px;
+    max-height: 1.5em;
 }
 
 .menu {
@@ -16175,7 +16175,7 @@ button:hover .HoverArrow__tipPath {
     background-repeat: no-repeat;
     border-radius: 5px;
     text-align: center;
-    padding: 140px 0;
+    padding: 120px 0;
     position: relative;
 }
 
