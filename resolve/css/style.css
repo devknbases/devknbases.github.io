@@ -16549,15 +16549,19 @@ button:hover .HoverArrow__tipPath {
 }
 
 .app-pricing-item .item-title {
-    font-size: 30px;
+    font-size: 22px;
     line-height: 36px;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
+    text-align: left;
 }
 
 .app-pricing-item .item-label {
-    font-size: 18px;
-    line-height: 1.2;
+    font-size: 14px;
+    line-height: 1.5;
     margin-bottom: 18px;
+    font-weight: 200;
+    text-align: left;
+    color: #a7aaad;
 }
 
 .app-pricing-item .item-price {
@@ -16599,7 +16603,7 @@ button:hover .HoverArrow__tipPath {
 
 .app-pricing-item ul li {
     font-size: 15px;
-    line-height: 30px;
+    line-height: 1.5;
     text-align: left;
     margin-bottom: 15px;
 }
