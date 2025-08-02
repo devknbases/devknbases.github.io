@@ -68,8 +68,6 @@
             line-height: 1.5;
         }
 
-
-
         .closing-message {
             font-size: 14px;
             color: #6b7c93;
@@ -147,8 +145,6 @@
         <h1>Payment method added!</h1>
         <p class="subtitle">Your payment method has been successfully configured.</p>
 
-
-
         <p class="closing-message" id="closing-message">
             This window will close automatically in <span class="countdown" id="countdown">3</span> seconds...
         </p>
@@ -159,36 +155,22 @@
     </div>
 
     <script>
-        // Check if window can be auto-closed
-        const canAutoClose = window.opener !== null || window.history.length <= 1;
+        // Declare functions first
+        function attemptClose() {
+            try {
+                window.close();
+                console.log('Window closed successfully');
+            } catch (error) {
+                console.log('Could not close window:', error);
+                showFinalMessage();
+            }
+        }
 
-        // Countdown logic
-        let seconds = canAutoClose ? 3 : 0; // Shorter countdown if can auto-close
-        const countdownElement = document.getElementById('countdown');
-
-        if (!canAutoClose) {
-            // Show manual close immediately if auto-close won't work
-            showManualCloseOption();
-        } else {
-            const countdownInterval = setInterval(() => {
-                seconds--;
-                countdownElement.textContent = seconds;
-
-                if (seconds <= 0) {
-                    clearInterval(countdownInterval);
-
-                    // Check if window can be closed
-                    if (window.opener || window.history.length <= 1) {
-                        try {
-                            window.close();
-                        } catch (error) {
-                            showManualCloseOption();
-                        }
-                    } else {
-                        showManualCloseOption();
-                    }
-                }
-            }, 1000);
+        function showFinalMessage() {
+            const closingMessage = document.getElementById('closing-message');
+            closingMessage.innerHTML = `
+                <strong>Please close this tab manually using Ctrl+W (Windows) or Cmd+W (Mac)</strong>
+            `;
         }
 
         function showManualCloseOption() {
@@ -209,36 +191,45 @@
             document.querySelector('.success-container').appendChild(manualClose);
         }
 
-        function attemptClose() {
-            // Try different methods to close
-            try {
-                window.close();
-            } catch (e1) {
-                try {
-                    window.opener.close();
-                } catch (e2) {
-                    try {
-                        window.parent.close();
-                    } catch (e3) {
-                        // If nothing works, show instructions
-                        document.querySelector('.closing-message').innerHTML = `
-                            <strong>Please close this tab manually using Ctrl+W (Windows) or Cmd+W (Mac)</strong>
-                        `;
-                    }
-                }
-            }
-        }
+        // Check different indicators that this might be a popup
+        const isLikelyPopup = window.opener !== null ||
+            window.history.length === 1 ||
+            window.location !== window.parent.location ||
+            document.referrer.includes('stripe.com');
 
-        // Optional: Send message to parent window if needed
+        console.log('Is likely popup:', isLikelyPopup);
+        console.log('Window opener:', window.opener);
+        console.log('History length:', window.history.length);
+        console.log('Referrer:', document.referrer);
+
+        // Always try the countdown first, fallback to manual if it fails
+        let seconds = 3;
+        const countdownElement = document.getElementById('countdown');
+
+        console.log('Starting countdown...');
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+            console.log('Countdown:', seconds);
+
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                console.log('Attempting to close window...');
+                attemptClose();
+            }
+        }, 1000);
+
+        // Send message to parent window
         try {
             if (window.opener) {
                 window.opener.postMessage({
                     type: 'PAYMENT_SUCCESS',
                     status: 'completed'
                 }, '*');
+                console.log('Message sent to parent window');
             }
         } catch (error) {
-            console.log('Could not communicate with parent window');
+            console.log('Could not communicate with parent window:', error);
         }
     </script>
 </body>
