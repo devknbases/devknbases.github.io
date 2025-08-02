@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -113,9 +114,11 @@
                 transform: scale(0.8);
                 opacity: 0.5;
             }
+
             50% {
                 transform: scale(1.1);
             }
+
             100% {
                 transform: scale(1);
                 opacity: 1;
@@ -134,57 +137,97 @@
         }
     </style>
 </head>
+
 <body>
     <div class="success-container">
         <div class="checkmark-container">
             <div class="checkmark">✓</div>
         </div>
-        
+
         <h1>Payment method added!</h1>
         <p class="subtitle">Your payment method has been successfully configured.</p>
-        
 
-        
-        <p class="closing-message">
-            This window will close automatically in <span class="countdown" id="countdown">5</span> seconds...
+
+
+        <p class="closing-message" id="closing-message">
+            This window will close automatically in <span class="countdown" id="countdown">3</span> seconds...
         </p>
-        
+
         <div class="stripe-logo">
             Secured by Stripe
         </div>
     </div>
-    
+
     <script>
+        // Check if window can be auto-closed
+        const canAutoClose = window.opener !== null || window.history.length <= 1;
+
         // Countdown logic
-        let seconds = 8;
+        let seconds = canAutoClose ? 3 : 0; // Shorter countdown if can auto-close
         const countdownElement = document.getElementById('countdown');
-        
-        const countdownInterval = setInterval(() => {
-            seconds--;
-            countdownElement.textContent = seconds;
-            
-            if (seconds <= 0) {
-                clearInterval(countdownInterval);
-                
+
+        if (!canAutoClose) {
+            // Show manual close immediately if auto-close won't work
+            showManualCloseOption();
+        } else {
+            const countdownInterval = setInterval(() => {
+                seconds--;
+                countdownElement.textContent = seconds;
+
+                if (seconds <= 0) {
+                    clearInterval(countdownInterval);
+
+                    // Check if window can be closed
+                    if (window.opener || window.history.length <= 1) {
+                        try {
+                            window.close();
+                        } catch (error) {
+                            showManualCloseOption();
+                        }
+                    } else {
+                        showManualCloseOption();
+                    }
+                }
+            }, 1000);
+        }
+
+        function showManualCloseOption() {
+            const closingMessage = document.getElementById('closing-message');
+            closingMessage.innerHTML = `
+                <strong>You can now close this tab and return to Teams.</strong>
+            `;
+
+            // Add manual close button
+            const manualClose = document.createElement('div');
+            manualClose.className = 'manual-close';
+            manualClose.innerHTML = `
+                <button class="close-button" onclick="attemptClose()">Close Tab</button>
+                <div style="margin-top: 12px; font-size: 12px; color: #6b7c93;">
+                    Or use Ctrl+W (Windows) / Cmd+W (Mac)
+                </div>
+            `;
+            document.querySelector('.success-container').appendChild(manualClose);
+        }
+
+        function attemptClose() {
+            // Try different methods to close
+            try {
+                window.close();
+            } catch (e1) {
                 try {
-                    // Try to close the window
-                    window.close();
-                } catch (error) {
-                    // If can't close, show manual close option
-                    document.querySelector('.closing-message').innerHTML = `
-                        <strong>You can now close this tab and return to Teams.</strong>
-                    `;
-                    
-                    // Add manual close button
-                    const manualClose = document.createElement('div');
-                    manualClose.className = 'manual-close';
-                    manualClose.innerHTML = `
-                        <button class="close-button" onclick="window.close()">Close Window</button>
-                    `;
-                    document.querySelector('.success-container').appendChild(manualClose);
+                    window.opener.close();
+                } catch (e2) {
+                    try {
+                        window.parent.close();
+                    } catch (e3) {
+                        // If nothing works, show instructions
+                        document.querySelector('.closing-message').innerHTML = `
+                            <strong>Please close this tab manually using Ctrl+W (Windows) or Cmd+W (Mac)</strong>
+                        `;
+                    }
                 }
             }
-        }, 1000);
+        }
 
         // Optional: Send message to parent window if needed
         try {
@@ -199,4 +242,5 @@
         }
     </script>
 </body>
+
 </html>
