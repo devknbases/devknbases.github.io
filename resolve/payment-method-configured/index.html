@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method Added Successfully</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(180deg, #f6f9fc 0%, #fff 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #32325d;
+        }
+
+        .success-container {
+            background: white;
+            padding: 48px 40px;
+            border-radius: 12px;
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+            max-width: 440px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #e6ebf1;
+        }
+
+        .checkmark-container {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d924 0%, #00b81a 100%);
+            margin: 0 auto 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: checkmarkPulse 0.6s ease-out;
+        }
+
+        .checkmark {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #32325d;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #6b7c93;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+
+
+        .closing-message {
+            font-size: 14px;
+            color: #6b7c93;
+            margin-bottom: 16px;
+        }
+
+        .countdown {
+            font-weight: 600;
+            color: #635bff;
+        }
+
+        .manual-close {
+            margin-top: 24px;
+        }
+
+        .close-button {
+            background: #635bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .close-button:hover {
+            background: #5a54f0;
+            transform: translateY(-1px);
+        }
+
+        .stripe-logo {
+            color: #635bff;
+            font-size: 12px;
+            margin-top: 24px;
+            opacity: 0.6;
+        }
+
+        @keyframes checkmarkPulse {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .success-container {
+                padding: 36px 24px;
+                margin: 0 16px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="checkmark-container">
+            <div class="checkmark">✓</div>
+        </div>
+        
+        <h1>Payment method added!</h1>
+        <p class="subtitle">Your payment method has been successfully configured.</p>
+        
+
+        
+        <p class="closing-message">
+            This window will close automatically in <span class="countdown" id="countdown">5</span> seconds...
+        </p>
+        
+        <div class="stripe-logo">
+            Secured by Stripe
+        </div>
+    </div>
+    
+    <script>
+        // Countdown logic
+        let seconds = 8;
+        const countdownElement = document.getElementById('countdown');
+        
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+            
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                
+                try {
+                    // Try to close the window
+                    window.close();
+                } catch (error) {
+                    // If can't close, show manual close option
+                    document.querySelector('.closing-message').innerHTML = `
+                        <strong>You can now close this tab and return to Teams.</strong>
+                    `;
+                    
+                    // Add manual close button
+                    const manualClose = document.createElement('div');
+                    manualClose.className = 'manual-close';
+                    manualClose.innerHTML = `
+                        <button class="close-button" onclick="window.close()">Close Window</button>
+                    `;
+                    document.querySelector('.success-container').appendChild(manualClose);
+                }
+            }
+        }, 1000);
+
+        // Optional: Send message to parent window if needed
+        try {
+            if (window.opener) {
+                window.opener.postMessage({
+                    type: 'PAYMENT_SUCCESS',
+                    status: 'completed'
+                }, '*');
+            }
+        } catch (error) {
+            console.log('Could not communicate with parent window');
+        }
+    </script>
+</body>
+</html>
