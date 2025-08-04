@@ -146,7 +146,7 @@
         <p class="subtitle">Your payment method has been successfully configured.</p>
 
         <p class="closing-message" id="closing-message">
-            This window will close automatically in <span class="countdown" id="countdown">3</span> seconds...
+            <strong>You can now close this tab and return to Teams.</strong>
         </p>
 
         <div class="stripe-logo">
@@ -155,71 +155,41 @@
     </div>
 
     <script>
-        // Declare functions first
-        function attemptClose() {
-            try {
-                window.close();
-            } catch (error) {
-                console.log('Could not close window:', error);
-                showFinalMessage();
-            }
-        }
-
-        function showFinalMessage() {
-            const closingMessage = document.getElementById('closing-message');
-            closingMessage.innerHTML = `
-                <strong>Please close this tab manually using Ctrl+W (Windows) or Cmd+W (Mac)</strong>
-            `;
-        }
-
-        function showManualCloseOption() {
-            const closingMessage = document.getElementById('closing-message');
-            closingMessage.innerHTML = `
-                <strong>You can now close this tab and return to Teams.</strong>
-            `;
-
-            // Add manual close button
-            const manualClose = document.createElement('div');
-            manualClose.className = 'manual-close';
-            manualClose.innerHTML = `
-                <button class="close-button" onclick="attemptClose()">Close Tab</button>
-                <div style="margin-top: 12px; font-size: 12px; color: #6b7c93;">
-                    Or use Ctrl+W (Windows) / Cmd+W (Mac)
-                </div>
-            `;
-            document.querySelector('.success-container').appendChild(manualClose);
-        }
-
-        // Check different indicators that this might be a popup
-        const isLikelyPopup = window.opener !== null ||
-            window.history.length === 1 ||
-            window.location !== window.parent.location ||
-            document.referrer.includes('stripe.com');
-
-        // Always try the countdown first, fallback to manual if it fails
-        let seconds = 8;
-        const countdownElement = document.getElementById('countdown');
-
-        const countdownInterval = setInterval(() => {
-            seconds--;
-            countdownElement.textContent = seconds;
-
-            if (seconds <= 0) {
-                clearInterval(countdownInterval);
-                attemptClose();
-            }
-        }, 1000);
-
-        // Send message to parent window
+        // Send message to parent window if possible
         try {
             if (window.opener) {
                 window.opener.postMessage({
                     type: 'PAYMENT_SUCCESS',
                     status: 'completed'
                 }, '*');
+                console.log('Message sent to parent window');
             }
         } catch (error) {
             console.log('Could not communicate with parent window:', error);
+        }
+
+        // Add manual close button immediately
+        setTimeout(() => {
+            const manualClose = document.createElement('div');
+            manualClose.className = 'manual-close';
+            manualClose.innerHTML = `
+                <button class="close-button" onclick="attemptClose()">Close Tab</button>
+            `;
+            document.querySelector('.success-container').appendChild(manualClose);
+        }, 1000);
+
+        function attemptClose() {
+            try {
+                window.close();
+            } catch (error) {
+                // If button doesn't work, show keyboard instructions
+                const closingMessage = document.getElementById('closing-message');
+                closingMessage.innerHTML = `
+                    <strong>Please close this tab using:</strong><br>
+                    <span style="font-family: monospace; background: #f6f9fc; padding: 4px 8px; border-radius: 4px;">Ctrl + W</span> (Windows) or 
+                    <span style="font-family: monospace; background: #f6f9fc; padding: 4px 8px; border-radius: 4px;">Cmd + W</span> (Mac)
+                `;
+            }
         }
     </script>
 </body>
