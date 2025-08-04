@@ -167,30 +167,6 @@
         } catch (error) {
             console.log('Could not communicate with parent window:', error);
         }
-
-        // Add manual close button immediately
-        setTimeout(() => {
-            const manualClose = document.createElement('div');
-            manualClose.className = 'manual-close';
-            manualClose.innerHTML = `
-                <button class="close-button" onclick="attemptClose()">Close Tab</button>
-            `;
-            document.querySelector('.success-container').appendChild(manualClose);
-        }, 1000);
-
-        function attemptClose() {
-            try {
-                window.close();
-            } catch (error) {
-                // If button doesn't work, show keyboard instructions
-                const closingMessage = document.getElementById('closing-message');
-                closingMessage.innerHTML = `
-                    <strong>Please close this tab using:</strong><br>
-                    <span style="font-family: monospace; background: #f6f9fc; padding: 4px 8px; border-radius: 4px;">Ctrl + W</span> (Windows) or 
-                    <span style="font-family: monospace; background: #f6f9fc; padding: 4px 8px; border-radius: 4px;">Cmd + W</span> (Mac)
-                `;
-            }
-        }
     </script>
 </body>
 
