@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resolve - Guidelines - Setting Technicians</title>
+    <title>Resolve Central - Guidelines - Out-of-Office Management for Response Teams</title>
     <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon" />
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="../../css/fontawesome.min.css" />
@@ -111,8 +111,8 @@
                   </ul> -->
                         </li>
                         <li class="nav-item dropdown submenu mega-home active">
-                            <a href="../../" class="nav-link dropdown-toggle" style="display: flex;">Resolve Home <img
-                                    class="icon" src="../../images/home_10/shapes/up-right.svg" alt="Icon" /></a>
+                            <a href="../../" class="nav-link dropdown-toggle" style="display: flex;">Resolve Home <img class="icon" src="../../images/home_10/shapes/up-right.svg"
+                                    alt="Icon" /></a>
                         </li>
                     </ul>
                 </div>
@@ -130,24 +130,24 @@
                         <div class="section-title-left post-content">
                             <a href="#" class="cate-btn">Guideline</a>
 
-                            <h2>Installation Guide: Resolve for Microsoft Teams Organization-wide</h2>
+                            <h2>Out-of-Office Management for Response Teams</h2>
                             <p>
-                                A step-by-step guide for deploying Resolve in Microsoft Teams across your organization,
-                                enabling all employees to submit incident reports.
+                                Configure how Resolve handles incident assignment when team members are unavailable
+                                using Microsoft 365 out-of-office status
                             </p>
                             <div class="post-date">
-                                <p><i class="far fa-calendar-alt"></i>Updated: January 22, 2025</p>
+                                <p><i class="far fa-calendar-alt"></i>Updated: August 25, 2025</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 d-lg-none">
                         <div class="banner-image">
-                            <img src="./../../images/org.svg" alt="Illustrator Image" />
+                            <img src="./../../images/oof.svg" alt="Illustrator Image" />
                         </div>
                     </div>
                 </div>
                 <div class="banner-right-two banner-image d-none d-lg-block">
-                    <img src="./../../images/org.svg" style="width: 60%;" alt="Illustrator Image" />
+                    <img src="./../../images/oof.svg" style="width: 40%;" alt="Illustrator Image" />
                 </div>
             </div>
             <!-- <img class="banner-shape-2" src="assets/images/shape/bg-shape-2.png" alt="Pricing Banner Shape"> -->
@@ -162,75 +162,104 @@
                         <div class="single-post-area">
                             <div class="single-post-item">
                                 <div class="post-content">
-                                    <p class="post-para">Resolve is designed to be integrated at the organizational
-                                        level within Microsoft Teams, allowing any employee to report incidents through
-                                        the
-                                        platform. While all users automatically get access as free requesters, the
-                                        extension must be configured through <a
-                                            href="https://admin.teams.microsoft.com/" target="_blank">Teams Admin
-                                            Center</a> to enable it
-                                        organization-wide. This guide details the process of implementing and
-                                        configuring Resolve as an application in Microsoft Teams for your entire
-                                        organization.</p>
+                                    <p class="post-para">When team members are on vacation or unavailable, maintaining
+                                        efficient incident response becomes challenging. Microsoft 365 provides built-in
+                                        out-of-office functionality that automatically sets status indicators and sends
+                                        autoreplies when employees are away. Resolve leverages this native functionality
+                                        to intelligently manage incident assignments, ensuring that new cases don't pile
+                                        up on unavailable team members' desks while maintaining optimal response times
+                                        for your organization.</p>
+
+                                    <p class="post-para">
+                                        Understanding how to configure and utilize out-of-office management in Resolve
+                                        will help you maintain consistent incident resolution even when key team members
+                                        are temporarily unavailable.</p>
                                 </div>
                                 <div class="post-content">
-                                    <p class="para-subtitle">Initial Installation and Setup of Resolve in Your
-                                        Organization</p>
+                                    <p class="para-subtitle">Understanding Microsoft 365 Out-of-Office Status</p>
                                     <p class="post-para">
-                                        To enable Resolve, first configure your organization by following these steps:
+                                        Microsoft 365 offers comprehensive out-of-office capabilities through Outlook
+                                        and Teams that go beyond simple email autoreplies. When employees set their
+                                        out-of-office status, the system automatically:
+                                    <ul class="mb-30">
+                                        <li>Displays availability indicators across all Microsoft 365 applications</li>
+                                        <li>Sends automatic responses to incoming emails</li>
+                                        <li>Updates presence status in Teams conversations</li>
+                                        <li>Syncs availability information across the entire Microsoft ecosystem</li>
+                                        <li>Blocks calendar during the Out-of-Office time</li>
+                                        <li>Declines meetings and new invitations that occurs during that period</li>
+                                    </ul>
+                                    <img class="mb-30" src="./../../images/automatic_replies.png" alt="Teams" />
+                                    <p class="post-para">This status information becomes particularly valuable for
+                                        incident management
+                                        systems like Resolve, as it provides real-time visibility into team member
+                                        availability without requiring separate status tracking or manual updates.
                                     </p>
-                                    <ol class="mb-40">
-                                        <li>Prerequisite: Have an administrator account in your organization.</li>
-                                        <li>From Microsoft Teams:
-                                            <ul>
-                                                <li>Go to 'Apps' section</li>
-                                                <li>Search for 'resolve' in the Apps store</li>
-                                                <li>Click 'Add' to install</li>
-                                            </ul>
-                                            <img class="mb-30" src="./../../images/resolve_store.png" alt="Teams" />
-                                        </li>
-                                        <li class="mb-30">Once installed, open the application and follow the initial
-                                            setup wizard.
-                                            During this process, you will need to grant the necessary permissions for
-                                            Resolve to operate in your organization.</li>
-                                        <img class="mb-30" src="./../../images/resolve_config.png" alt="Teams" />
-                                    </ol>
 
-                                    <p class="para-subtitle">Enabling Resolve Organization-wide</p>
-                                    <p class="post-para">After configuring your organization in Resolve, you can enable
-                                        the extension organization-wide, allowing any user to report incidents through
-                                        Teams. Follow these steps:</p>
+                                    <p class="para-subtitle">How Resolve Integrates with Out-of-Office Status</p>
 
-                                    <ol class="mb-40">
-                                        <li>Open <a href="https://admin.teams.microsoft.com/" target="_blank">Microsoft
-                                                Teams admin center</a></li>
-                                        <li>Navigate to <b>Teams Apps</b> > <b>Setup policies</b></li>
-                                        <li class="mb-30">In <b>App setup policies</b>, open the default policy:
-                                            <u>Global (Org-wide
-                                                default)</u>, which applies to the majority of users in your
-                                            organization
-                                        </li>
-                                        <img class="mb-30" src="./../../images/admin_teams_center.png" alt="Teams" />
-                                        <li>Go to <b>Installed apps</b> section</li>
-                                        <li>Click <b>+Add Apps</b></li>
-                                        <li>Search for "resolve" in the search box</li>
-                                        <li>Click <b>Select</b> followed by <b>Add</b> to include it in the Global
-                                            policy
-                                        </li>
-                                        <li>Click <b>Save</b> to apply the policy changes and add Resolve to users'
-                                            Teams personal environment</li>
-                                    </ol>
+                                    <p class="post-para">Resolve seamlessly connects with Microsoft 365's availability
+                                        data to make intelligent assignment decisions. Rather than blindly assigning
+                                        incidents to
+                                        unavailable team members, Resolve can adapt its assignment algorithm to focus on
+                                        available responders.</p>
 
-                                    <img class="mb-30" src="./../../images/admin_teams_center2.png" alt="Teams" />
+                                    <p class="post-para">This integration ensures that incidents reach team members who
+                                        can actually respond, reducing response times and preventing important cases
+                                        from sitting unattended in unavailable users' queues. The system automatically
+                                        detects when team members return from their time off and resumes normal
+                                        assignment patterns.</p>
 
-                                    <p class="post-para">Optionally, you can add Resolve to <b>Pinned apps</b> to
-                                        display it in
-                                        the app bar at your preferred position.</p>
-                                    <img class="mb-30" src="./../../images/pinned_apps.png" alt="Teams" />
+                                    <p class="para-subtitle">Configuring Out-of-Office Exclusion for Response Teams</p>
 
-                                    <p class="post-para">Once finished, click <b>Save</b> to apply the
-                                        policy changes. All users in your organization will now have access to the
-                                        Resolve extension.</p>
+                                    <p class="post-para">To configure out-of-office management for your Response Teams,
+                                        navigate to the Response Teams section in the administration interface. When
+                                        creating or editing a team, you'll find the option "Exclude out-of-office
+                                        teammates for new incidents" in the <i>Assignment Rules</i> section.</p>
+
+                                    <p class="post-para">The out-of-office exclusion feature is disabled by default,
+                                        meaning administrators must actively enable it if they want to use this
+                                        functionality. When enabled, Resolve modifies its standard Round Robin
+                                        assignment algorithm to skip team members who have set their out-of-office
+                                        status in Microsoft 365. New incidents will only be assigned to available team
+                                        members, ensuring optimal response times and preventing work overload when team
+                                        members return from vacation. When disabled, Resolve continues its standard
+                                        assignment pattern regardless of team member availability status.</p>
+
+                                    <img class="mb-30" src="./../../images/enable_oof.png" alt="Teams" />
+
+                                    <p class="post-para">When the exclusion feature is enabled, the system maintains the
+                                        balanced workload distribution among available members while temporarily
+                                        removing unavailable ones from the assignment rotation. When out-of-office team
+                                        members return and update their availability status, they automatically rejoin
+                                        the assignment cycle.</p>
+
+                                    <p class="para-subtitle">Handling Complete Team Unavailability</p>
+
+                                    <p class="post-para">In situations where all team members are simultaneously out of
+                                        office, Resolve implements a protective mechanism to prevent incidents from
+                                        being assigned inappropriately. When the system detects that no team members are
+                                        available for assignment, incoming incidents are assigned to the Response Team
+                                        as a whole rather than to any individual teammate.</p>
+
+                                    <p class="post-para">When this occurs, company administrators automatically receive
+                                        notifications alerting them to the situation. This allows administrators to
+                                        manually review and reassign these incidents to alternative teams or available
+                                        responders, ensuring that critical issues don't go unaddressed during team-wide
+                                        unavailability periods.</p>
+
+                                    <p class="para-subtitle">Best Practices for Out-of-Office Management</p>
+                                    <p class="post-para">To maximize the effectiveness of out-of-office integration,
+                                        ensure that team members consistently update their availability status in
+                                        Microsoft 365 when taking time off. Regular communication about planned absences
+                                        and proper use of out-of-office settings will improve the system's ability to
+                                        make optimal assignment decisions.</p>
+                                    <p class="post-para">Consider temporarily adding additional members to Response
+                                        Teams during periods when multiple regular team members will be unavailable
+                                        simultaneously, such as during vacation seasons or planned time off. The
+                                        out-of-office exclusion feature works best when combined with proactive team
+                                        planning that anticipates availability gaps and adjusts team composition
+                                        accordingly.</p>
                                 </div>
                             </div>
                             <!-- <div class="tag-widget mb-50">
@@ -262,7 +291,7 @@
 
                                 <div class="col-md-6">
                                     <div class="post-item">
-                                        <img src="./../../images/org.svg" alt="Blog Post" />
+                                        <img src="./../../images/incident.svg" alt="Blog Post" />
                                         <div class="post-content">
                                             <a href="#" class="cate-btn">Product Update</a>
                                             <h4 class="post-title">
@@ -284,7 +313,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="post-item">
-                                        <img src="./../../images/org.svg" alt="Blog Post" />
+                                        <img src="./../../images/incident.svg" alt="Blog Post" />
                                         <div class="post-content">
                                             <a href="#" class="cate-btn">Case Study</a>
                                             <h4 class="post-title">
@@ -337,19 +366,113 @@
                                     data-test-id="beehiiv-embed" height="62" frameborder="0" scrolling="no"
                                     style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
                             </div>
+                            <!-- <div class="categorie-widget mb-50">
+                                <h4 class="widget-title">Categories</h4>
+                                <ul class="list-unstyled categorie-list">
+                                    <li>
+                                        <a href="#">Development Tips <span>(10)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Product Update <span>(9)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Case Study <span>(12)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Creative <span>(07)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Inspiration <span>(06)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Landpagy <span>(11)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Lifestyle <span>(05)</span></a>
+                                    </li>
+                                </ul>
+                            </div>
 
                             <div class="recent-news-widget mb-50">
-                                <h4 class="widget-title">Related guides</h4>
+                                <h4 class="widget-title">Reacent News</h4>
                                 <div class="news-item">
+                                    <img src="./../../images/blog/news1.png" alt="" />
                                     <div class="news-body">
-                                        <a href="../technician-teams/">
-                                            <h5 class="news-title">Setting Up Response Teams</h5>
+                                        <a href="#">
+                                            <h5 class="news-title">Is It Worth Buying A Premium Form Builder.</h5>
                                         </a>
-                                        <p class="news-date"><i class="far fa-calendar-alt"></i>August 1st, 2025</p>
+                                        <p class="news-date"><i class="far fa-calendar-alt"></i>January 14, 2020</p>
                                     </div>
                                 </div>
-
+                                <div class="news-item">
+                                    <img src="./../../images/blog/news2.png" alt="" />
+                                    <div class="news-body">
+                                        <a href="#">
+                                            <h5 class="news-title">10 Classic Summer Vacations</h5>
+                                        </a>
+                                        <p class="news-date"><i class="far fa-calendar-alt"></i>January 14, 2020</p>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <img src="./../../images/blog/news3.png" alt="" />
+                                    <div class="news-body">
+                                        <a href="#">
+                                            <h5 class="news-title">How To Easily Add weForms Widget Using Elementor</h5>
+                                        </a>
+                                        <p class="news-date"><i class="far fa-calendar-alt"></i>January 14, 2020</p>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <img src="./../../images/blog/news4.png" alt="" />
+                                    <div class="news-body">
+                                        <a href="#">
+                                            <h5 class="news-title">How to Create GDPR Consent Form In WordPress</h5>
+                                        </a>
+                                        <p class="news-date"><i class="far fa-calendar-alt"></i>January 14, 2020</p>
+                                    </div>
+                                </div>
                             </div>
+
+                            <div class="tag-widget mb-45">
+                                <h4 class="widget-title">Tags</h4>
+                                <ul class="list-unstyled tag-list">
+                                    <li><a href="#">WordPress</a></li>
+                                    <li><a href="#">web design</a></li>
+                                    <li><a href="#">ui/ux</a></li>
+                                    <li><a href="#">saas</a></li>
+                                    <li><a href="#">software</a></li>
+                                    <li><a href="#">creative</a></li>
+                                    <li><a href="#">product</a></li>
+                                    <li><a href="#">development</a></li>
+                                    <li><a href="#">design</a></li>
+                                    <li><a href="#">sequrity</a></li>
+                                    <li><a href="#">agency</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="instagram-widget">
+                                <h4 class="widget-title">Instragram</h4>
+                                <div class="instagram-items">
+                                    <a href="#" class="instagram-item">
+                                        <img src="./../../images/blog/insta1.png" alt="" />
+                                    </a>
+                                    <a href="#" class="instagram-item">
+                                        <img src="./../../images/blog/insta2.png" alt="" />
+                                    </a>
+                                    <a href="#" class="instagram-item">
+                                        <img src="./../../images/blog/insta3.png" alt="" />
+                                    </a>
+                                    <a href="#" class="instagram-item">
+                                        <img src="./../../images/blog/insta4.png" alt="" />
+                                    </a>
+                                    <a href="#" class="instagram-item">
+                                        <img src="./../../images/blog/insta5.png" alt="" />
+                                    </a>
+                                    <a href="#" class="instagram-item">
+                                        <img src="./../../images/blog/insta6.png" alt="" />
+                                    </a>
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
