@@ -548,7 +548,15 @@ a {
 }
 
 .app-features-area {
-    background-image: url("../images/features-area.png");
+    background-image: url("../images/features.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.app-features-area-extra {
+    background-image: url("../images/dashboard.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -16119,7 +16127,7 @@ button:hover .HoverArrow__tipPath {
 
 .app-feature-content .features-items {
     min-width: 70%;
-    background-color: rgb(219 215 255 / 88%);
+    background-color: rgb(252 224 228 / 88%);
     padding: 20px;
     border-radius: 5px;
 }
@@ -16166,6 +16174,24 @@ button:hover .HoverArrow__tipPath {
     font-size: 15px;
     line-height: 27px;
     color: #454545;
+}
+
+.app-feature-content .extra-title {
+    color: #fff;
+}
+
+.app-feature-content .features-items.extra {
+    background-color: rgb(250 217 190 / 82%);
+}
+
+
+
+.app-feature-content .features-items.extra .item .item-content .item-title {
+    color: #473b3b;
+}
+
+.app-feature-content .features-items.extra .item .item-content .item-text {
+    color: #433636;
 }
 
 .app-video-wrapp {
