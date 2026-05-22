@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="1288"
+   height="1288"
+   id="svg73"
+   sodipodi:docname="similarity.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs73" />
+  <sodipodi:namedview
+     id="namedview73"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.31485797"
+     inkscape:cx="525.63383"
+     inkscape:cy="798.77286"
+     inkscape:window-width="1392"
+     inkscape:window-height="932"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg73" />
+  <!-- Hand-drawn doodle style illustration for Recurrences blog post -->
+  <!-- Concept: Magnifying glass revealing pattern connections between incident tickets -->
+  <!-- ==================== -->
+  <!-- INCIDENT TICKET 1 (top-left) -->
+  <!-- ==================== -->
+  <!-- Ticket body - hand-drawn rectangle with slight irregularity -->
+  <path
+     d="m 177.37804,231.62576 c 2.62893,-2.68862 262.89453,-6.72157 368.05236,0 2.62894,2.68865 6.57236,161.31796 0,255.42012 -2.62895,2.68863 -262.89455,6.72158 -368.05236,0 -2.62894,-2.68863 -6.57237,-147.87481 0,-255.42012 z"
+     fill="#ffffff"
+     stroke="#000000"
+     stroke-width="10.6345"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path1" />
+  <!-- Ticket header bar -->
+  <path
+     d="m 177.37804,231.62576 c 2.62893,-2.68862 262.89453,-6.72157 368.05236,0 2.62894,2.68865 6.57236,53.77266 0,73.93741 -2.62895,2.68863 -262.89455,6.72158 -368.05236,0 -2.62894,-2.68863 -6.57237,-49.73971 0,-73.93741 z"
+     fill="#1af4aa"
+     stroke="#000000"
+     stroke-width="10.6345"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path2" />
+  <!-- Warning/alert icon on ticket -->
+  <path
+     d="m 354.83185,258.51209 19.71709,-24.19768 19.7171,24.19768 z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="5.31724"
+     stroke-linejoin="round"
+     id="path3" />
+  <ellipse
+     cx="374.54898"
+     cy="250.4462"
+     fill="#1af4aa"
+     id="circle3"
+     rx="2.6289454"
+     ry="2.688633"
+     style="stroke-width:1.32932" />
+  <!-- Text lines on ticket -->
+  <path
+     d="m 214.18327,339.17107 c 2.62895,-1.34431 186.65513,-2.68863 291.81295,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path4" />
+  <path
+     d="m 214.18327,379.50057 c 5.2579,-1.34432 147.22095,-2.68864 226.0893,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path5" />
+  <path
+     d="m 214.18327,419.83006 c 2.62895,-1.34431 199.79986,-2.68864 278.66822,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path6" />
+  <path
+     d="m 214.18327,457.47092 c 2.62895,-1.34432 107.78677,-2.68864 160.36567,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path7" />
+  <!-- ==================== -->
+  <!-- INCIDENT TICKET 2 (top-right) -->
+  <!-- ==================== -->
+  <path
+     d="m 808.32494,164.40995 c 2.62895,-2.68864 262.89446,-6.72158 368.05246,0 2.6289,2.68863 6.5723,161.31796 0,255.42011 -2.629,2.68863 -262.89463,6.72158 -368.05246,0 -2.62894,-2.68864 -6.57235,-147.8748 0,-255.42011 z"
+     fill="#ffffff"
+     stroke="#000000"
+     stroke-width="10.6345"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path8" />
+  <!-- Ticket header bar -->
+  <path
+     d="m 808.32494,164.40995 c 2.62895,-2.68864 262.89446,-6.72158 368.05246,0 2.6289,2.68863 6.5723,53.77265 0,73.9374 -2.629,2.68863 -262.89463,6.72159 -368.05246,0 -2.62894,-2.68864 -6.57235,-49.7397 0,-73.9374 z"
+     fill="#1af4aa"
+     stroke="#000000"
+     stroke-width="10.6345"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path9" />
+  <!-- Warning icon -->
+  <path
+     d="m 985.7788,198.01786 19.7171,-24.1977 19.717,24.1977 z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="5.31724"
+     stroke-linejoin="round"
+     id="path10" />
+  <ellipse
+     cx="1005.4958"
+     cy="189.95197"
+     fill="#1af4aa"
+     id="circle10"
+     rx="2.6289454"
+     ry="2.688633"
+     style="stroke-width:1.32932" />
+  <!-- Text lines -->
+  <path
+     d="m 845.13019,271.95526 c 5.25788,-1.34432 186.65511,-2.68864 291.81291,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path11" />
+  <path
+     d="m 845.13019,312.28475 c 2.62894,-1.34431 147.22091,-2.68864 226.08921,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path12" />
+  <path
+     d="m 845.13019,352.61425 c 5.25788,-1.34433 199.79981,-2.68864 278.66821,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path13" />
+  <path
+     d="m 845.13019,390.2551 c 2.62894,-1.34432 107.78673,-2.68864 160.36571,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path14" />
+  <!-- ==================== -->
+  <!-- INCIDENT TICKET 3 (bottom-left) -->
+  <!-- ==================== -->
+  <path
+     d="m 98.50967,688.69333 c 2.62895,-2.68863 262.89455,-6.72158 368.05237,0 2.62894,2.68863 6.57236,161.31796 0,255.42013 -2.62895,2.68864 -262.89455,6.72156 -368.05237,0 -2.62894,-2.68864 -6.57236,-147.87482 0,-255.42013 z"
+     fill="#ffffff"
+     stroke="#000000"
+     stroke-width="10.6345"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path15" />
+  <!-- Ticket header bar -->
+  <path
+     d="m 98.50967,688.69333 c 2.62895,-2.68863 262.89455,-6.72158 368.05237,0 2.62894,2.68863 6.57236,53.77265 0,73.93741 -2.62895,2.68863 -262.89455,6.72158 -368.05237,0 -2.62894,-2.68865 -6.57236,-49.73971 0,-73.93741 z"
+     fill="#1af4aa"
+     stroke="#000000"
+     stroke-width="10.6345"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path16" />
+  <!-- Warning icon -->
+  <path
+     d="m 275.96349,722.30124 19.71709,-24.1977 19.71709,24.1977 z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="5.31724"
+     stroke-linejoin="round"
+     id="path17" />
+  <ellipse
+     cx="295.6806"
+     cy="714.23535"
+     fill="#1af4aa"
+     id="circle17"
+     rx="2.6289454"
+     ry="2.688633"
+     style="stroke-width:1.32932" />
+  <!-- Text lines -->
+  <path
+     d="m 135.31491,796.23864 c 5.25789,-1.34431 186.65513,-2.68863 291.81294,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path18" />
+  <path
+     d="m 135.31491,836.56814 c 2.62894,-1.34432 147.22094,-2.68864 226.08931,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path19" />
+  <path
+     d="m 135.31491,876.89762 c 5.25789,-1.34431 199.79985,-2.68863 278.66822,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path20" />
+  <path
+     d="m 135.31491,914.53849 c 2.62894,-1.34432 107.78677,-2.68864 160.36567,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path21" />
+  <!-- ==================== -->
+  <!-- INCIDENT TICKET 4 (bottom-right, slightly behind) -->
+  <!-- ==================== -->
+  <path
+     d="m 729.45659,634.92067 c 2.62893,-2.68863 262.89451,-6.72157 368.05231,0 2.629,2.68864 6.5724,161.31797 0,255.42012 -2.6289,2.68864 -262.8945,6.72158 -368.05231,0 -2.62895,-2.68863 -6.57238,-147.87481 0,-255.42012 z"
+     fill="#ffffff"
+     stroke="#000000"
+     stroke-width="10.6345"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path22" />
+  <!-- Ticket header bar -->
+  <path
+     d="m 729.45659,634.92067 c 2.62893,-2.68863 262.89451,-6.72157 368.05231,0 2.629,2.68864 6.5724,53.77266 0,73.93741 -2.6289,2.68864 -262.8945,6.72158 -368.05231,0 -2.62895,-2.68864 -6.57238,-49.73971 0,-73.93741 z"
+     fill="#1af4aa"
+     stroke="#000000"
+     stroke-width="10.6345"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path23" />
+  <!-- Warning icon -->
+  <path
+     d="m 906.9104,668.52858 19.71709,-24.19769 19.7171,24.19769 z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="5.31724"
+     stroke-linejoin="round"
+     id="path24" />
+  <ellipse
+     cx="926.6275"
+     cy="660.46271"
+     fill="#1af4aa"
+     id="circle24"
+     rx="2.6289454"
+     ry="2.688633"
+     style="stroke-width:1.32932" />
+  <!-- Text lines -->
+  <path
+     d="m 766.26181,742.46598 c 5.2579,-1.3443 186.65511,-2.68862 291.81299,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path25" />
+  <path
+     d="m 766.26181,782.79548 c 2.62895,-1.34432 147.22096,-2.68863 226.08929,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path26" />
+  <path
+     d="m 766.26181,823.12497 c 5.2579,-1.34432 199.79989,-2.68863 278.66819,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path27" />
+  <path
+     d="m 766.26181,860.76583 c 2.62895,-1.34431 107.78677,-2.68863 160.36568,0"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path28" />
+  <!-- ==================== -->
+  <!-- CONNECTION LINES (dashed, showing patterns/similarity) -->
+  <!-- ==================== -->
+  <!-- Ticket 1 to Ticket 2 -->
+  <path
+     d="m 545.4304,325.72791 c 52.57891,-40.32949 157.73672,-80.65897 262.89454,-40.32949"
+     stroke="#1af4aa"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     stroke-dasharray="16, 10"
+     id="path29" />
+  <!-- Ticket 1 to Ticket 3 -->
+  <path
+     d="M 361.40422,487.04588 C 335.11476,554.2617 308.82531,608.03435 282.53585,688.69333"
+     stroke="#1af4aa"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     stroke-dasharray="16, 10"
+     id="path30" />
+  <!-- Ticket 2 to Ticket 4 -->
+  <path
+     d="M 992.3511,419.83006 C 966.0617,487.04588 939.77221,554.2617 913.48277,634.92067"
+     stroke="#1af4aa"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     stroke-dasharray="16, 10"
+     id="path31" />
+  <!-- Ticket 3 to Ticket 4 -->
+  <path
+     d="M 466.56204,809.6818 C 545.4304,782.79548 637.44349,769.35232 729.45659,769.35232"
+     stroke="#1af4aa"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     stroke-dasharray="16, 10"
+     id="path32" />
+  <!-- Ticket 1 to Ticket 4 (diagonal cross-connection) -->
+  <path
+     d="m 519.14095,446.71639 c 78.86836,94.10214 157.73672,188.20428 236.60509,268.86327"
+     stroke="#1af4aa"
+     stroke-width="6.64655"
+     stroke-linecap="round"
+     fill="none"
+     stroke-dasharray="12, 10"
+     id="path33" />
+  <!-- Connection dots at endpoints -->
+  <ellipse
+     cx="545.43042"
+     cy="325.72794"
+     fill="#1af4aa"
+     stroke="#000000"
+     stroke-width="5.31724"
+     id="circle33"
+     rx="10.515781"
+     ry="10.754532" />
+  <ellipse
+     cx="808.32495"
+     cy="285.39841"
+     fill="#1af4aa"
+     stroke="#000000"
+     stroke-width="5.31724"
+     id="circle34"
+     rx="10.515781"
+     ry="10.754532" />
+  <ellipse
+     cx="361.40424"
+     cy="487.04593"
+     fill="#1af4aa"
+     stroke="#000000"
+     stroke-width="5.31724"
+     id="circle35"
+     rx="10.515781"
+     ry="10.754532" />
+  <ellipse
+     cx="282.53589"
+     cy="688.69336"
+     fill="#1af4aa"
+     stroke="#000000"
+     stroke-width="5.31724"
+     id="circle36"
+     rx="10.515781"
+     ry="10.754532" />
+  <ellipse
+     cx="992.35114"
+     cy="419.83008"
+     fill="#1af4aa"
+     stroke="#000000"
+     stroke-width="5.31724"
+     id="circle37"
+     rx="10.515781"
+     ry="10.754532" />
+  <ellipse
+     cx="913.48279"
+     cy="634.92065"
+     fill="#1af4aa"
+     stroke="#000000"
+     stroke-width="5.31724"
+     id="circle38"
+     rx="10.515781"
+     ry="10.754532" />
+  <ellipse
+     cx="466.56207"
+     cy="809.68182"
+     fill="#1af4aa"
+     stroke="#000000"
+     stroke-width="5.31724"
+     id="circle39"
+     rx="10.515781"
+     ry="10.754532" />
+  <ellipse
+     cx="729.4566"
+     cy="769.35229"
+     fill="#1af4aa"
+     stroke="#000000"
+     stroke-width="5.31724"
+     id="circle40"
+     rx="10.515781"
+     ry="10.754532" />
+  <!-- ==================== -->
+  <!-- MAGNIFYING GLASS (main focal element, overlaying center) -->
+  <!-- ==================== -->
+  <!-- Glass circle -->
+  <ellipse
+     cx="650.58826"
+     cy="554.26172"
+     fill="none"
+     stroke="#000000"
+     stroke-width="15.9517"
+     stroke-linecap="round"
+     id="circle41"
+     rx="230.03273"
+     ry="235.25536" />
+  <!-- Inner lens with slight tint -->
+  <ellipse
+     cx="650.58826"
+     cy="554.26172"
+     fill="#1af4aa"
+     fill-opacity="0.12"
+     stroke="none"
+     id="circle42"
+     rx="220.83142"
+     ry="225.84514"
+     style="stroke-width:1.32932" />
+  <!-- Glass highlight/reflection -->
+  <path
+     d="m 519.14095,446.71639 c 13.14472,-26.88633 52.5789,-53.77267 92.01309,-60.49423"
+     stroke="#ffffff"
+     stroke-width="13.2932"
+     stroke-linecap="round"
+     fill="none"
+     opacity="0.7"
+     id="path42" />
+  <path
+     d="m 499.42385,487.04588 c 6.57237,-16.1318 22.34605,-33.60791 35.49077,-43.01813"
+     stroke="#ffffff"
+     stroke-width="9.30522"
+     stroke-linecap="round"
+     fill="none"
+     opacity="0.5"
+     id="path43" />
+  <!-- Handle -->
+  <path
+     d="m 808.32494,729.02283 c 39.43419,40.32949 131.44727,134.43163 210.31566,215.09063 19.717,20.16476 39.4342,43.01805 52.5788,60.49424"
+     stroke="#000000"
+     stroke-width="18.6103"
+     stroke-linecap="round"
+     fill="none"
+     id="path44" />
+  <!-- Handle body (thicker grip area) -->
+  <path
+     d="m 961.42905,887.13156 c 26.28948,26.88632 60.75825,68.63454 100.19245,108.96402 10.5157,10.75462 24.2858,22.29272 28.2291,33.04732"
+     stroke="#000000"
+     stroke-width="42.5379"
+     stroke-linecap="round"
+     fill="none"
+     id="path45"
+     sodipodi:nodetypes="csc" />
+  <path
+     d="m 962.13835,887.1316 c 26.28952,26.88632 61.46765,71.4719 100.90185,111.8014 10.5157,10.7545 24.2859,23.7113 28.2292,34.4659"
+     stroke="#1af4aa"
+     stroke-width="31.9035"
+     stroke-linecap="round"
+     fill="none"
+     id="path46"
+     sodipodi:nodetypes="csc" />
+  <!-- Handle end cap -->
+  <path
+     d="m 1061.8097,996.5473 c 6.5723,6.7216 30.5456,29.575 37.1179,40.3296"
+     stroke="#000000"
+     stroke-width="47.8552"
+     stroke-linecap="round"
+     fill="none"
+     id="path47"
+     sodipodi:nodetypes="cc" />
+  <!-- ==================== -->
+  <!-- SPARKLE/INSIGHT MARKS (around magnifying glass) -->
+  <!-- ==================== -->
+  <!-- Top sparkle -->
+  <path
+     d="m 644.01585,271.95526 6.57237,-26.88632 6.57236,26.88632"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path48" />
+  <path
+     d="m 630.87113,258.51209 13.14472,6.72158 m 26.28947,0 -13.14474,-6.72158"
+     stroke="#000000"
+     stroke-width="6.64655"
+     stroke-linecap="round"
+     fill="none"
+     id="path49" />
+  <!-- Left sparkle -->
+  <path
+     d="m 374.54894,540.81853 -19.71709,6.72159 19.71709,6.72158"
+     stroke="#000000"
+     stroke-width="7.97586"
+     stroke-linecap="round"
+     fill="none"
+     id="path50" />
+  <path
+     d="m 361.40422,530.064 6.57236,13.44317 m 0,8.06589 -6.57236,13.44317"
+     stroke="#000000"
+     stroke-width="6.64655"
+     stroke-linecap="round"
+     fill="none"
+     id="path51" />
+  <!-- Top-right sparkle -->
+  <path
+     d="m 874.04858,379.50057 19.71709,-13.44317 -6.57236,26.88632"
+     stroke="#000000"
+     stroke-width="6.64655"
+     stroke-linecap="round"
+     fill="none"
+     id="path52" />
+  <path
+     d="m 897.70909,372.77899 9.20131,-13.44317"
+     stroke="#000000"
+     stroke-width="6.64655"
+     stroke-linecap="round"
+     fill="none"
+     id="path53" />
+  <path
+     d="m 900.33804,386.22216 10.51578,-4.03296"
+     stroke="#000000"
+     stroke-width="6.64655"
+     stroke-linecap="round"
+     fill="none"
+     id="path54" />
+  <!-- Extra emphasis lines (discovery/insight radiating) -->
+  <path
+     d="M 466.56204,339.17107 450.78837,319.00634"
+     stroke="#000000"
+     stroke-width="6.64655"
+     stroke-linecap="round"
+     fill="none"
+     id="path55" />
+  <path
+     d="m 486.27912,319.00634 -9.2013,-22.85338"
+     stroke="#000000"
+     stroke-width="6.64655"
+     stroke-linecap="round"
+     fill="none"
+     id="path56" />
+  <path
+     d="m 512.56858,309.59611 -3.94342,-26.88632"
+     stroke="#000000"
+     stroke-width="6.64655"
+     stroke-linecap="round"
+     fill="none"
+     id="path57" />
+  <!-- Bottom-left small emphasis marks -->
+  <path
+     d="m 433.70022,782.79548 -13.14473,13.44316"
+     stroke="#000000"
+     stroke-width="6.64655"
+     stroke-linecap="round"
+     fill="none"
+     id="path58" />
+  <path
+     d="m 446.84494,798.92727 -13.14472,17.47612"
+     stroke="#000000"
+     stroke-width="6.64655"
+     stroke-linecap="round"
+     fill="none"
+     id="path59" />
+  <!-- ==================== -->
+  <!-- CLUSTER GROUPING CIRCLE (subtle, behind magnifying glass) -->
+  <!-- ==================== -->
+  <ellipse
+     cx="624.29877"
+     cy="581.14807"
+     rx="473.21017"
+     ry="416.73807"
+     fill="none"
+     stroke="#000000"
+     stroke-width="5.31724"
+     stroke-dasharray="20, 14"
+     opacity="0.25"
+     id="ellipse59" />
+  <!-- ==================== -->
+  <!-- SMALL FLOATING PATTERN DOTS (adding visual texture like the original) -->
+  <!-- ==================== -->
+  <ellipse
+     cx="151.08859"
+     cy="567.7049"
+     fill="#000000"
+     id="circle59"
+     rx="6.5723639"
+     ry="6.7215819"
+     style="stroke-width:1.32932" />
+  <ellipse
+     cx="170.80569"
+     cy="587.86957"
+     fill="#000000"
+     id="circle60"
+     rx="5.2578907"
+     ry="5.3772659"
+     style="stroke-width:1.32932" />
+  <ellipse
+     cx="144.51624"
+     cy="601.31274"
+     fill="#000000"
+     id="circle61"
+     rx="3.9434183"
+     ry="4.032949"
+     style="stroke-width:1.32932" />
+  <ellipse
+     cx="1123.7985"
+     cy="487.04593"
+     fill="#000000"
+     id="circle62"
+     rx="6.5723639"
+     ry="6.7215819"
+     style="stroke-width:1.32932" />
+  <ellipse
+     cx="1143.5155"
+     cy="507.21066"
+     fill="#000000"
+     id="circle63"
+     rx="5.2578907"
+     ry="5.3772659"
+     style="stroke-width:1.32932" />
+  <ellipse
+     cx="1150.0878"
+     cy="473.60275"
+     fill="#000000"
+     id="circle64"
+     rx="3.9434183"
+     ry="4.032949"
+     style="stroke-width:1.32932" />
+  <ellipse
+     cx="611.15405"
+     cy="997.88617"
+     fill="#000000"
+     id="circle65"
+     rx="6.5723639"
+     ry="6.7215819"
+     style="stroke-width:1.32932" />
+  <ellipse
+     cx="634.81458"
+     cy="1011.3293"
+     fill="#000000"
+     id="circle66"
+     rx="5.2578907"
+     ry="5.3772659"
+     style="stroke-width:1.32932" />
+  <ellipse
+     cx="591.43701"
+     cy="1014.0179"
+     fill="#000000"
+     id="circle67"
+     rx="3.9434183"
+     ry="4.032949"
+     style="stroke-width:1.32932" />
+  <ellipse
+     cx="1228.9562"
+     cy="769.35229"
+     fill="#1af4aa"
+     id="circle68"
+     rx="6.5723639"
+     ry="6.7215819"
+     style="stroke-width:1.32932" />
+  <ellipse
+     cx="1248.6733"
+     cy="789.51703"
+     fill="#1af4aa"
+     id="circle69"
+     rx="5.2578907"
+     ry="5.3772659"
+     style="stroke-width:1.32932" />
+  <ellipse
+     cx="1228.9562"
+     cy="809.68182"
+     fill="#1af4aa"
+     id="circle70"
+     rx="3.9434183"
+     ry="4.032949"
+     style="stroke-width:1.32932" />
+  <ellipse
+     cx="45.930759"
+     cy="366.0574"
+     fill="#1af4aa"
+     id="circle71"
+     rx="6.5723639"
+     ry="6.7215819"
+     style="stroke-width:1.32932" />
+  <ellipse
+     cx="65.64785"
+     cy="386.22217"
+     fill="#1af4aa"
+     id="circle72"
+     rx="5.2578907"
+     ry="5.3772659"
+     style="stroke-width:1.32932" />
+  <ellipse
+     cx="45.930759"
+     cy="406.3869"
+     fill="#1af4aa"
+     id="circle73"
+     rx="3.9434183"
+     ry="4.032949"
+     style="stroke-width:1.32932" />
+</svg>
