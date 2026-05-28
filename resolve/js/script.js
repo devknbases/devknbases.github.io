@@ -77,7 +77,7 @@
       {
         scrollTop: 0,
       },
-      800
+      800,
     );
     return false;
   });
@@ -403,7 +403,7 @@
         var tranlateY = parseInt(Trans[5]);
         $(this).css(
           "transform",
-          `translateX(${tranlateX}px) translateY(${tranlateY}px)  rotate(-${45 * timeCount}deg)`
+          `translateX(${tranlateX}px) translateY(${tranlateY}px)  rotate(-${45 * timeCount}deg)`,
         );
       });
 
@@ -721,7 +721,7 @@
     },
     function () {
       $(this).removeClass("shadow-lg");
-    }
+    },
   );
 
   // Pricing Two Switcher
@@ -950,6 +950,36 @@ window.addEventListener("hashchange", updateActiveLink);
 
 // Ejecutar la función una vez al cargar la página
 document.addEventListener("DOMContentLoaded", updateActiveLink);
+
+// Stage interaction in #accelerate section
+(function () {
+  function activateStage(n) {
+    document.querySelectorAll("#accelerate .info-txt").forEach(function (el) {
+      var stage = parseInt(el.getAttribute("data-stage"));
+      el.classList.toggle("stage-active", stage === n);
+    });
+    for (var i = 1; i <= 3; i++) {
+      var hl = document.getElementById("stage-hl-" + i);
+      if (hl) hl.setAttribute("opacity", i === n ? "0" : "1");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    activateStage(1);
+
+    document.querySelectorAll("#accelerate .info-txt").forEach(function (el) {
+      el.addEventListener("click", function () {
+        activateStage(parseInt(el.getAttribute("data-stage")));
+      });
+    });
+
+    document.querySelectorAll(".stage-zone").forEach(function (el) {
+      el.addEventListener("click", function () {
+        activateStage(parseInt(el.getAttribute("data-stage")));
+      });
+    });
+  });
+})();
 
 // Opcionalmente, si quieres que funcione también con el desplazamiento
 window.addEventListener("scroll", () => {

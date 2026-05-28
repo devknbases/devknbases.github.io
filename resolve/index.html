@@ -135,7 +135,7 @@
                                 </span>
                             </h1>
                             <p class="banner-text mb-55">
-                                Elevate team productivity with <b>Resolve</b> - the Smart, AI-powered incident
+                                Elevate your team productivity with <b>Resolve</b><br>The AI-powered incident
                                 management extension for Microsoft Teams
                             </p>
                             <a href="https://teams.microsoft.com/l/app/84f3e1e3-1a13-44a9-abad-03b6a6b9122e?source=app-details-dialog"
@@ -175,7 +175,7 @@
                         <div class="features-items">
                             <div class="item">
                                 <div class="item-content">
-                                    <h3 class="item-title">Native Teams Experience</h3>
+                                    <h6 class="item-title">Native Teams Experience</h6>
                                     <p class="item-text">Work where you already are. Resolve integrates directly
                                         into your Microsoft Teams interface, eliminating the need to switch between
                                         applications and ensuring a seamless workflow.</p>
@@ -183,7 +183,7 @@
                             </div>
                             <div class="item">
                                 <div class="item-content">
-                                    <h3 class="item-title">Real-Time Collaboration</h3>
+                                    <h6 class="item-title">Real-Time Collaboration</h6>
                                     <p class="item-text">Collaborate on incidents instantly with your team. Share
                                         updates, assign tasks, and resolve issues together, all within your familiar
                                         Teams environment.</p>
@@ -191,7 +191,7 @@
                             </div>
                             <div class="item">
                                 <div class="item-content">
-                                    <h3 class="item-title">Instant Notifications</h3>
+                                    <h6 class="item-title">Instant Notifications</h6>
                                     <p class="item-text">Stay informed without disruption. Receive real-time Teams
                                         notifications for new incidents, updates, and resolutions, keeping you
                                         connected and responsive at all times.</p>
@@ -213,20 +213,20 @@
                 </div>
                 <div class="row align-items-center gy-lg-0 gy-4 mt-30">
                     <div class="col-lg-4 order-2 order-lg-1 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="info-txt mb-30">
+                        <div class="info-txt mb-30" data-stage="1">
                             <h6>Smart Pre-submission Check</h6>
                             <p>Before a new incident is created, Resolve's AI scans for similar open cases you can
                                 subscribe to, and surfaces related playbooks that may help you resolve the issue on your
                                 own — reducing ticket volume and getting you to a solution faster.</p>
                         </div>
-                        <div class="info-txt mb-30">
+                        <div class="info-txt mb-30" data-stage="2">
                             <h6>Automated Incident Triage</h6>
                             <p>Once submitted, Resolve's AI automatically summarizes the incident, determines whether
                                 it's an incident or a service request, classifies it with the right tags, and assigns a
                                 priority based on severity and organizational context — so critical issues always get
                                 immediate attention.</p>
                         </div>
-                        <div class="info-txt">
+                        <div class="info-txt" data-stage="3">
                             <h6>Intelligent Routing & Assignment</h6>
                             <p>Resolve automatically routes each incident to the most suitable team based on expertise,
                                 then assigns the right responder based on skills and current workload — eliminating
@@ -234,7 +234,19 @@
                         </div>
                     </div>
                     <div class="col-lg-7 offset-l-1 order-1 order-lg-2">
-                        <img src="./images/incident-flow.svg" alt="app" style="max-width: 120%;" />
+                        <div class="stage-image-wrapper">
+                            <img src="./images/incident-flow.svg" alt="app" class="stage-base-img" />
+                            <svg class="stage-overlay-svg" viewBox="0 0 1443 630" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                <!-- Dim overlays for inactive stages (opacity 1 = dimmed, 0 = active/visible) -->
+                                <rect class="stage-hl" id="stage-hl-1" x="0"    y="0" width="585" height="630" fill="rgba(255,250,229,0.45)" opacity="0" />
+                                <rect class="stage-hl" id="stage-hl-2" x="585"  y="0" width="493" height="630" fill="rgba(255,250,229,0.45)" opacity="1" />
+                                <rect class="stage-hl" id="stage-hl-3" x="1095" y="0" width="348" height="630" fill="rgba(255,250,229,0.45)" opacity="1" />
+                                <!-- Clickable hit zones (on top of dim overlays) -->
+                                <rect class="stage-zone" data-stage="1" x="0"    y="0" width="585" height="630" fill="transparent" />
+                                <rect class="stage-zone" data-stage="2" x="585"  y="0" width="493" height="630" fill="transparent" />
+                                <rect class="stage-zone" data-stage="3" x="1095" y="0" width="348" height="630" fill="transparent" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -257,7 +269,7 @@
                         <div class="features-items extra">
                             <div class="item">
                                 <div class="item-content">
-                                    <h3 class="item-title">Visibility over all incidents</h3>
+                                    <h6 class="item-title">Visibility over all incidents</h6>
                                     <p class="item-text">Monitor every incident across your organization from a
                                         centralized dashboard. Group incidents by response teams, priority, status, or
                                         type to identify patterns and bottlenecks—all from one
@@ -266,7 +278,7 @@
                             </div>
                             <div class="item">
                                 <div class="item-content">
-                                    <h3 class="item-title">Real-time stats about your incidents</h3>
+                                    <h6 class="item-title">Real-time stats about your incidents</h6>
                                     <p class="item-text">Track key performance metrics with live analytics. Monitor
                                         active incidents, resolution times, rates, or volumes through interactive
                                         dashboards.
@@ -275,8 +287,8 @@
                             </div>
                             <div class="item">
                                 <div class="item-content">
-                                    <h3 class="item-title">Creates dynamic response teams that scale with your
-                                        organization</h3>
+                                    <h6 class="item-title">Creates dynamic response teams that scale with your
+                                        organization</h6>
                                     <p class="item-text">Create and manage flexible response teams that adapt to your
                                         company's evolving needs. Use specific team roles to ensure the right people
                                         respond at the right time.</p>

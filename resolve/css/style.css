@@ -129,8 +129,8 @@ html:focus-within {
 body {
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    font-size: 1.0625rem;
-    line-height: 1.75rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
     text-rendering: optimizeSpeed;
     color: var(--text-color);
 }
@@ -10063,6 +10063,50 @@ Why-choose CSS
     text-align: left;
 }
 
+#accelerate .info-txt {
+    opacity: 0.45;
+    cursor: pointer;
+    transition: opacity 0.35s ease;
+    border-left: 3px solid transparent;
+    padding-left: 12px;
+}
+
+#accelerate .info-txt.stage-active {
+    opacity: 1;
+    border-left-color: #809eff;
+}
+
+.stage-image-wrapper {
+    position: relative;
+    display: block;
+    max-width: 100%;
+}
+
+.stage-base-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.stage-overlay-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.stage-overlay-svg .stage-zone {
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.stage-hl {
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
 .deal-fast-area .info-card .nav-link .icon {
     margin-right: 15px;
 }
@@ -16164,15 +16208,12 @@ button:hover .HoverArrow__tipPath {
 
 .app-feature-content .features-items .item .item-content .item-title {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1rem;
     line-height: 30px;
     letter-spacing: 0.5px;
-    margin-bottom: 7px;
 }
 
 .app-feature-content .features-items .item .item-content .item-text {
-    font-size: 15px;
-    line-height: 27px;
     color: #475569;
 }
 
@@ -19548,7 +19589,9 @@ Contact Page Two CSS
 
 .post-content .post-para {
     color: #6a737c;
-    padding-bottom: 35px;
+    line-height: 1.4rem;
+    padding-bottom: 25px;
+    font-size: .85rem;
 }
 
 .post-content .auth-name {
@@ -19950,8 +19993,9 @@ Contact Page Two CSS
 
 .single-post-item .post-content .post-para {
     color: #5d5d66;
-    line-height: 30px;
+    line-height: 1.4rem;
     padding-bottom: 25px;
+    font-size: .85rem;
 }
 
 .single-post-item .post-list li {
