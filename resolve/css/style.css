@@ -16086,6 +16086,57 @@ button:hover .HoverArrow__tipPath {
     filter: invert(47%) sepia(52%) saturate(2088%) hue-rotate(322deg) brightness(90%) contrast(106%);
 }
 
+@keyframes rotWordIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotWordOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+.rotating-word-wrapper {
+    display: inline-grid;
+    vertical-align: baseline;
+}
+
+.rotating-word-wrapper::before {
+    content: 'Document';
+    visibility: hidden;
+    grid-area: 1 / 1;
+    user-select: none;
+    pointer-events: none;
+}
+
+.rotating-word {
+    grid-area: 1 / 1;
+    justify-self: end;
+    color: var(--brand);
+}
+
+.rotating-word.rot-in {
+    animation: rotWordIn 0.35s ease forwards;
+}
+
+.rotating-word.rot-out {
+    animation: rotWordOut 0.26s ease forwards;
+}
+
 .app-banner-images {
     display: flex;
     flex-wrap: nowrap;
@@ -16217,12 +16268,8 @@ button:hover .HoverArrow__tipPath {
     color: #475569;
 }
 
-.app-feature-content .extra-title {
-    color: #fff;
-}
-
 .app-feature-content .features-items.extra {
-    background-color: rgb(250 217 190 / 82%);
+    background-color: rgb(250 217 190 / 95%);
 }
 
 
@@ -23919,6 +23966,81 @@ Contact Page Two CSS
     100% {
         transform: scale(1.01);
     }
+}
+
+/* ---- Notion-inspired refinements ---- */
+
+/* Body: slightly more readable base size and line-height */
+body {
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+/* Global buttons: smaller, cleaner, less heavy */
+.btn {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    padding: 0.4375rem 1.125rem;
+    border-radius: 6px;
+    border-width: 1px;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+/* Banner hero CTA */
+.app-banner-content .btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.8125rem;
+}
+
+/* Navbar right-side CTA button */
+.navbar .right-nav .btn {
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+/* Remove the forced min-width on right-nav so the header doesn't get too wide */
+.navbar .right-nav {
+    min-width: auto;
+}
+
+/* Leaner navbar vertical padding */
+@media screen and (min-width: 992px) {
+    .menu>.nav-item {
+        padding: 1.375rem 0;
+    }
+}
+
+/* Nav link: slightly smaller, normal weight feels cleaner */
+.menu>.nav-item>.nav-link {
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: #374151;
+}
+
+/* Banner title: tighten line-height */
+.app-banner-content .banner-title {
+    line-height: 1.2;
+}
+
+/* Banner subtext: readable weight and color */
+.app-banner-content .banner-text {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--text-color-2);
+}
+
+/* btn-red: keep brand color but use solid, minimal border */
+.btn-red {
+    border-color: var(--brand);
+}
+
+.btn-red:hover {
+    background: #4a4eb5;
+    border-color: #4a4eb5;
+    color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
