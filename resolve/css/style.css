@@ -548,7 +548,7 @@ a {
 }
 
 .app-features-area {
-    background-image: url("../images/features.jpeg");
+    background-image: url("../images/features.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -556,7 +556,7 @@ a {
 }
 
 .app-features-area-extra {
-    background-image: url("../images/dashboard.jpeg");
+    background-image: url("../images/dashboard.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -16171,7 +16171,7 @@ button:hover .HoverArrow__tipPath {
 
 .app-feature-content .features-items {
     min-width: 70%;
-    background-color: rgb(234 232 255 / 88%);
+    background-color: rgb(234 232 255 / 95%);
     padding: 20px;
     border-radius: 5px;
 }
@@ -16183,7 +16183,7 @@ button:hover .HoverArrow__tipPath {
 }
 
 .app-feature-content .features-items .item:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .app-feature-content .features-items .item .item-icon {
@@ -16236,7 +16236,7 @@ button:hover .HoverArrow__tipPath {
 }
 
 .app-video-wrapp {
-    background-image: url("../images/home_10/video-img.png");
+    background-image: url("../images/video.jpg");
     /* background-position: center; */
     background-size: cover;
     background-repeat: no-repeat;
