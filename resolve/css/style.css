@@ -10398,6 +10398,21 @@ Why-choose CSS
     color: var(--brand);
 }
 
+@media (min-width: 992px) {
+    .menu_three .container-fluid {
+        position: relative;
+    }
+    .menu_three .navbar-nav.menu {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: fit-content;
+        margin: auto !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
 .banner-area-4 {
     overflow: hidden;
     padding-top: 250px;

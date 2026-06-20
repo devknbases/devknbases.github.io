@@ -96,39 +96,13 @@
     <main>
         <!-- Banner Area -->
         <section id="banner" class="app-banner-area pt-140 pb-20">
-            <div class="bg-shapes">
-                <div class="shape shape-svg">
-                    <svg width="806" height="886" viewBox="0 0 806 886" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g opacity="0.6" filter="url(#filter0_f_975:6)">
-                            <path
-                                d="M426.726 457.227C178.252 302.381 115.234 134.932 0 359.999V635.48H284.484C529.356 635.48 675.199 612.073 426.726 457.227Z"
-                                fill="#EEF5C1" />
-                        </g>
-                        <defs>
-                            <filter id="filter0_f_975:6" x="-250" y="0.559082" width="1055.56" height="884.921"
-                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                                <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_975:6" />
-                            </filter>
-                        </defs>
-                    </svg>
-                </div>
-                <div class="shape" data-parallax='{"x":-20, "y": 20, "rotateY":0}'></div>
-                <div class="shape" data-parallax='{"x":30, "y": -30, "rotateY":0}'></div>
-                <div class="shape" data-parallax='{"x":-40, "y": 40, "rotateY":0}'></div>
-                <div class="shape" data-parallax='{"x":-50, "y": -50, "rotateY":0}'></div>
-                <div class="shape" data-parallax='{"x":-25, "y": -25, "rotateY":0}'></div>
-                <div class="shape" data-parallax='{"x":35, "y": -35, "rotateY":0}'></div>
-                <div class="shape" data-parallax='{"x":-45, "y": 45, "rotateY":0}'></div>
-                <div class="shape" data-parallax='{"x":-55, "y": -55, "rotateY":0}'></div>
-            </div>
             <div class="container">
                 <div class="row align-items-center flex-column-reverse flex-md-row">
                     <div class="col-md-7">
                         <div class="app-banner-content wow fadeInLeft" data-wow-delay="0.3s">
                             <h1 class="banner-title mb-35">
-                                <span class="rotating-word-wrapper"><span class="rotating-word" id="rotating-word">Report</span></span>
+                                <span class="rotating-word-wrapper"><span class="rotating-word"
+                                        id="rotating-word">Report</span></span>
                                 incidents — without leaving
                                 <span>
                                     Microsoft Teams
@@ -237,15 +211,22 @@
                     <div class="col-lg-7 offset-l-1 order-1 order-lg-2">
                         <div class="stage-image-wrapper">
                             <img src="./images/incident-flow.svg" alt="app" class="stage-base-img" />
-                            <svg class="stage-overlay-svg" viewBox="0 0 1443 630" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                            <svg class="stage-overlay-svg" viewBox="0 0 1443 630" xmlns="http://www.w3.org/2000/svg"
+                                preserveAspectRatio="none">
                                 <!-- Dim overlays for inactive stages (opacity 1 = dimmed, 0 = active/visible) -->
-                                <rect class="stage-hl" id="stage-hl-1" x="0"    y="0" width="585" height="630" fill="rgba(255,250,229,0.45)" opacity="0" />
-                                <rect class="stage-hl" id="stage-hl-2" x="585"  y="0" width="493" height="630" fill="rgba(255,250,229,0.45)" opacity="1" />
-                                <rect class="stage-hl" id="stage-hl-3" x="1095" y="0" width="348" height="630" fill="rgba(255,250,229,0.45)" opacity="1" />
+                                <rect class="stage-hl" id="stage-hl-1" x="0" y="0" width="585" height="630"
+                                    fill="rgba(255,250,229,0.45)" opacity="0" />
+                                <rect class="stage-hl" id="stage-hl-2" x="585" y="0" width="493" height="630"
+                                    fill="rgba(255,250,229,0.45)" opacity="1" />
+                                <rect class="stage-hl" id="stage-hl-3" x="1095" y="0" width="348" height="630"
+                                    fill="rgba(255,250,229,0.45)" opacity="1" />
                                 <!-- Clickable hit zones (on top of dim overlays) -->
-                                <rect class="stage-zone" data-stage="1" x="0"    y="0" width="585" height="630" fill="transparent" />
-                                <rect class="stage-zone" data-stage="2" x="585"  y="0" width="493" height="630" fill="transparent" />
-                                <rect class="stage-zone" data-stage="3" x="1095" y="0" width="348" height="630" fill="transparent" />
+                                <rect class="stage-zone" data-stage="1" x="0" y="0" width="585" height="630"
+                                    fill="transparent" />
+                                <rect class="stage-zone" data-stage="2" x="585" y="0" width="493" height="630"
+                                    fill="transparent" />
+                                <rect class="stage-zone" data-stage="3" x="1095" y="0" width="348" height="630"
+                                    fill="transparent" />
                             </svg>
                         </div>
                     </div>
@@ -260,7 +241,7 @@
                 <div class="col-lg-4 offset-lg-1 col-md-5">
                     <div class="app-feature-content wow fadeInRight" data-wow-delay="0.2s">
                         <h2 class="wow fadeInUp mb-65" style="color: rgb(42, 29, 29);">
-                            Take full control over your organization's
+                            Full visibility into your organization's
                             <span>
                                 incidents
                                 <img class="border-shape" src="./images/home_10/shapes/border.svg" alt="Border" />
@@ -270,29 +251,30 @@
                         <div class="features-items extra">
                             <div class="item">
                                 <div class="item-content">
-                                    <h6 class="item-title">Visibility over all incidents</h6>
-                                    <p class="item-text">Monitor every incident across your organization from a
-                                        centralized dashboard. Group incidents by response teams, priority, status, or
-                                        type to identify patterns and bottlenecks—all from one
-                                        unified interface.</p>
+                                    <h6 class="item-title">Full visibility over your incidents</h6>
+                                    <p class="item-text">Monitor every incident across your organization from one
+                                        centralized dashboard. Group them by response team, priority, status, or type,
+                                        and track live metrics like active incidents, resolution times, and volumes — so
+                                        patterns and bottlenecks surface from a single interface.</p>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="item-content">
-                                    <h6 class="item-title">Real-time stats about your incidents</h6>
-                                    <p class="item-text">Track key performance metrics with live analytics. Monitor
-                                        active incidents, resolution times, rates, or volumes through interactive
-                                        dashboards.
+                                    <h6 class="item-title">Spot recurring patterns automatically</h6>
+                                    <p class="item-text">Resolve analyzes your incidents and groups them into similarity
+                                        clusters — not just flagging that incidents are alike, but how. Same vendor,
+                                        same root cause, same location, similar impact: each cluster comes with an
+                                        AI-generated explanation and its most recent cases, so your team acts on
+                                        patterns instead of discovering them in hindsight.
                                     </p>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="item-content">
-                                    <h6 class="item-title">Creates dynamic response teams that scale with your
-                                        organization</h6>
+                                    <h6 class="item-title">Dynamic response teams that scale with you</h6>
                                     <p class="item-text">Create and manage flexible response teams that adapt to your
-                                        company's evolving needs. Use specific team roles to ensure the right people
-                                        respond at the right time.</p>
+                                        organization's evolving needs. Assign specific team roles so the right people
+                                        respond to the right incidents, every time.</p>
                                 </div>
                             </div>
                         </div>
