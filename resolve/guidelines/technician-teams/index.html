@@ -158,7 +158,7 @@
                                         you to adjust the structure as needs evolve. For example, if network incidents
                                         become more frequent and complex, it might be convenient to create a specific
                                         "Network Specialist" team, separating it from general support.</p>
-                                    <img class="mb-30" src="./../../images/teams-flow.png" alt="Teams" />
+                                    <img class="mb-30" src="./../../images/dynamic-teams.png" alt="Teams" />
                                     <p class="para-subtitle">Creating Your First Response Team</p>
                                     <p class="post-para">To create Response Teams in Resolve, you'll need to
                                         have an administrator role. The process is straightforward: go to the
@@ -169,8 +169,10 @@
                                         <li>A descriptive name that clearly identifies the team</li>
                                         <li>The relevant professional roles that represent the team's capabilities
                                         </li>
+                                        <li>The team's responsibilities (optional, but recommended: describe what the
+                                            team owns beyond its roles, e.g., "All incidents related to the SAP ERP
+                                            system")</li>
                                         <li>The members who will make up the team</li>
-                                        <li>The team's description (optional)</li>
                                     </ul>
 
                                     <img class="mb-30" src="./../../images/new-team.png" alt="Teams" />
@@ -208,9 +210,16 @@
                                     <p class="para-subtitle">How Incident Assignment Works for Response Teams</p>
                                     <p class="post-para">When a new incident is registered, our artificial intelligence
                                         analyzes and classifies it automatically. The system assigns the incident to the
-                                        team whose roles best match the type of problem. Within the team, incidents
+                                        team that best matches the problem, taking into account both the team's roles
+                                        and its responsibilities description. Within the team, incidents
                                         are distributed among members using a Round Robin algorithm, which considers the
                                         weight of each incident to maintain a balanced workload.</p>
+                                    <p class="post-para">The responsibilities description lets you route incidents
+                                        by criteria that roles alone can't capture, such as a specific system,
+                                        location, or vendor. For example, if two teams both include Network Support
+                                        Specialists, adding "All incidents related to the SAP ERP system" to one of
+                                        them helps route SAP incidents to that team. Write it as a short, concrete
+                                        sentence describing the incidents the team owns.</p>
                                     <p class="post-para">This automated process ensures that each incident quickly
                                         reaches the team most qualified to resolve it, optimizing response times and
                                         problem-solving efficiency.</p>

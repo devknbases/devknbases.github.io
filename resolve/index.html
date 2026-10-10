@@ -133,9 +133,64 @@
         <!-- Banner Area -->
 
         <!-- Features Area -->
-        <section id="features" class="app-features-area overflow-hidden pt-85 pb-190">
+        <section id="features" class="app-features-area has-showcase overflow-hidden pt-85 pb-190">
             <div class="row">
-                <div class="col-lg-7 col-md-6">
+                <div class="col-lg-7 col-md-6 d-flex align-items-center align-items-lg-start">
+                    <div class="feature-showcase wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="feature-showcase-glow"></div>
+                        <div class="feature-showcase-stage">
+                            <figure class="feature-shot is-active" data-shot="1">
+                                <div class="app-frame">
+                                    <div class="app-frame-bar"><span class="app-frame-search"></span></div>
+                                    <div class="app-frame-body">
+                                        <div class="app-frame-rail" aria-hidden="true"><i></i><i
+                                                class="is-active"></i><i></i><i></i><i></i></div>
+                                        <div class="app-frame-screen">
+                                            <img src="./images/features/native-teams.webp"
+                                                alt="Resolve running natively inside Microsoft Teams" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </figure>
+                            <figure class="feature-shot" data-shot="2">
+                                <div class="app-frame">
+                                    <div class="app-frame-bar"><span class="app-frame-search"></span></div>
+                                    <div class="app-frame-body">
+                                        <div class="app-frame-rail" aria-hidden="true"><span class="app-frame-bell"><i
+                                                    class="fas fa-bell"></i><b>1</b></span><i></i><i></i><i></i><i></i>
+                                        </div>
+                                        <div class="app-frame-screen">
+                                            <img src="./images/features/collaboration.webp"
+                                                alt="Collaborating on an incident in Resolve" loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </figure>
+                            <figure class="feature-shot" data-shot="3">
+                                <div class="app-frame">
+                                    <div class="app-frame-bar"><span class="app-frame-search"></span></div>
+                                    <div class="app-frame-body">
+                                        <div class="app-frame-rail" aria-hidden="true"><i></i><i
+                                                class="is-active"></i><i></i><i></i><i></i></div>
+                                        <div class="app-frame-screen">
+                                            <div class="copilot-demo">
+                                                <img src="./images/features/copilot.webp"
+                                                    alt="Resolve agent in Microsoft Copilot with suggested prompts"
+                                                    loading="lazy" />
+                                                <div class="copilot-input" aria-hidden="true">
+                                                    <span class="copilot-mention" data-text="@Resolve"></span><span
+                                                        class="copilot-typed"
+                                                        data-text=" what incidents are assigned to me?"></span><span
+                                                        class="copilot-caret"></span>
+                                                </div>
+                                                <span class="copilot-suggestion" aria-hidden="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-4 offset-lg-1 col-md-5">
                     <div class="app-feature-content wow fadeInRight" data-wow-delay="0.2s">
@@ -143,12 +198,11 @@
                             Seamless Teams
                             <span>
                                 Integration
-                                <img class="border-shape" src="./images/home_10/shapes/border.svg" alt="Border" />
                             </span>
                         </h2>
 
                         <div class="features-items">
-                            <div class="item">
+                            <div class="item is-active" data-shot="1" role="button" tabindex="0">
                                 <div class="item-content">
                                     <h6 class="item-title">Native Teams Experience</h6>
                                     <p class="item-text">Work where you already are. Resolve integrates directly
@@ -156,20 +210,19 @@
                                         applications and ensuring a seamless workflow.</p>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" data-shot="2" role="button" tabindex="0">
                                 <div class="item-content">
-                                    <h6 class="item-title">Real-Time Collaboration</h6>
-                                    <p class="item-text">Collaborate on incidents instantly with your team. Share
-                                        updates, assign tasks, and resolve issues together, all within your familiar
-                                        Teams environment.</p>
+                                    <h6 class="item-title">Collaborate and Stay Informed</h6>
+                                    <p class="item-text">Work on incidents together with your team. Share updates,
+                                        assign tasks, and get real-time Teams notifications for new incidents, changes,
+                                        and resolutions, so everyone stays in the loop without leaving Teams.</p>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" data-shot="3" role="button" tabindex="0">
                                 <div class="item-content">
-                                    <h6 class="item-title">Instant Notifications</h6>
-                                    <p class="item-text">Stay informed without disruption. Receive real-time Teams
-                                        notifications for new incidents, updates, and resolutions, keeping you
-                                        connected and responsive at all times.</p>
+                                    <h6 class="item-title">Copilot Integration</h6>
+                                    <p class="item-text">Just ask @Resolve in Copilot. Report incidents, check what’s
+                                        open, and find similar past cases without leaving the conversation.</p>
                                 </div>
                             </div>
                         </div>
@@ -234,47 +287,87 @@
             </div>
         </section>
 
-        <section id="features-extra" class="app-features-area-extra overflow-hidden pt-145 pb-190">
+        <section id="features-extra" class="app-features-area-extra has-showcase overflow-hidden pt-145 pb-190">
             <div class="row">
-                <div class="col-lg-7 col-md-6">
+                <div class="col-lg-7 col-md-6 d-flex align-items-center align-items-lg-start">
+                    <div class="feature-showcase wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="feature-showcase-glow"></div>
+                        <div class="feature-showcase-stage">
+                            <figure class="feature-shot is-active" data-shot="1">
+                                <div class="app-frame">
+                                    <div class="app-frame-bar"><span class="app-frame-search"></span></div>
+                                    <div class="app-frame-body">
+                                        <div class="app-frame-rail" aria-hidden="true"><i></i><i
+                                                class="is-active"></i><i></i><i></i><i></i></div>
+                                        <div class="app-frame-screen">
+                                            <img src="./images/features/visibility.webp"
+                                                alt="Resolve analytics dashboard with live incident metrics" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </figure>
+                            <figure class="feature-shot" data-shot="2">
+                                <div class="app-frame">
+                                    <div class="app-frame-bar"><span class="app-frame-search"></span></div>
+                                    <div class="app-frame-body">
+                                        <div class="app-frame-rail" aria-hidden="true"><i></i><i
+                                                class="is-active"></i><i></i><i></i><i></i></div>
+                                        <div class="app-frame-screen">
+                                            <img src="./images/features/similarity.webp"
+                                                alt="Recurring incident patterns grouped by similarity type in Resolve"
+                                                loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </figure>
+                            <figure class="feature-shot" data-shot="3">
+                                <div class="app-frame">
+                                    <div class="app-frame-bar"><span class="app-frame-search"></span></div>
+                                    <div class="app-frame-body">
+                                        <div class="app-frame-rail" aria-hidden="true"><i></i><i
+                                                class="is-active"></i><i></i><i></i><i></i></div>
+                                        <div class="app-frame-screen">
+                                            <img src="./images/features/response-teams.webp"
+                                                alt="Response teams with member roles, teammates and auto-assignment in Resolve"
+                                                loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-4 offset-lg-1 col-md-5">
                     <div class="app-feature-content wow fadeInRight" data-wow-delay="0.2s">
-                        <h2 class="wow fadeInUp mb-65" style="color: rgb(42, 29, 29);">
+                        <h2 class="wow fadeInUp mb-65" style="color: white;">
                             Full visibility into your organization's
                             <span>
                                 incidents
-                                <img class="border-shape" src="./images/home_10/shapes/border.svg" alt="Border" />
                             </span>
                         </h2>
 
-                        <div class="features-items extra">
-                            <div class="item">
+                        <div class="features-items">
+                            <div class="item is-active" data-shot="1" role="button" tabindex="0">
                                 <div class="item-content">
                                     <h6 class="item-title">Full visibility over your incidents</h6>
-                                    <p class="item-text">Monitor every incident across your organization from one
-                                        centralized dashboard. Group them by response team, priority, status, or type,
-                                        and track live metrics like active incidents, resolution times, and volumes — so
-                                        patterns and bottlenecks surface from a single interface.</p>
+                                    <p class="item-text">Track every incident from one live dashboard. Filter by team,
+                                        priority, status, or type, and see active cases, resolution times, and volumes
+                                        at a glance.</p>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" data-shot="2" role="button" tabindex="0">
                                 <div class="item-content">
                                     <h6 class="item-title">Spot recurring patterns automatically</h6>
-                                    <p class="item-text">Resolve analyzes your incidents and groups them into similarity
-                                        clusters — not just flagging that incidents are alike, but how. Same vendor,
-                                        same root cause, same location, similar impact: each cluster comes with an
-                                        AI-generated explanation and its most recent cases, so your team acts on
-                                        patterns instead of discovering them in hindsight.
-                                    </p>
+                                    <p class="item-text">Resolve groups similar incidents by vendor, root cause,
+                                        location, or impact, and explains each cluster with AI, so your team fixes
+                                        patterns, not just tickets.</p>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" data-shot="3" role="button" tabindex="0">
                                 <div class="item-content">
                                     <h6 class="item-title">Dynamic response teams that scale with you</h6>
-                                    <p class="item-text">Create and manage flexible response teams that adapt to your
-                                        organization's evolving needs. Assign specific team roles so the right people
-                                        respond to the right incidents, every time.</p>
+                                    <p class="item-text">Build flexible response teams with defined roles, so the right
+                                        people handle the right incidents as your organization grows.</p>
                                 </div>
                             </div>
                         </div>

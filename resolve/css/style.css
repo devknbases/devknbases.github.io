@@ -548,7 +548,7 @@ a {
 }
 
 .app-features-area {
-    background-image: url("../images/features.jpg");
+    background-image: url("../images/features-background.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -556,7 +556,7 @@ a {
 }
 
 .app-features-area-extra {
-    background-image: url("../images/dashboard.jpg");
+    background-image: url("../images/features-background2.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -10402,6 +10402,7 @@ Why-choose CSS
     .menu_three .container-fluid {
         position: relative;
     }
+
     .menu_three .navbar-nav.menu {
         position: absolute;
         left: 0;
@@ -16237,9 +16238,12 @@ button:hover .HoverArrow__tipPath {
 
 .app-feature-content .features-items {
     min-width: 70%;
-    background-color: rgb(234 232 255 / 95%);
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 12px;
 }
 
 .app-feature-content .features-items .item {
@@ -16273,6 +16277,7 @@ button:hover .HoverArrow__tipPath {
 }
 
 .app-feature-content .features-items .item .item-content .item-title {
+    color: #ffffff;
     font-weight: 700;
     font-size: 1rem;
     line-height: 30px;
@@ -16280,21 +16285,388 @@ button:hover .HoverArrow__tipPath {
 }
 
 .app-feature-content .features-items .item .item-content .item-text {
-    color: #475569;
+    color: #cbd5e1;
 }
 
-.app-feature-content .features-items.extra {
-    background-color: rgb(250 217 190 / 95%);
+/* Features showcase: screenshots synced with feature items */
+.feature-showcase {
+    position: relative;
+    width: 100%;
+    padding: 40px 0 40px 6%;
+}
+
+@media (min-width: 992px) {
+    .has-showcase .feature-showcase {
+        padding-top: 110px;
+    }
+}
+
+.feature-showcase-glow {
+    position: absolute;
+    inset: 15% 10% 15% 15%;
+    background: radial-gradient(closest-side, rgba(123, 131, 235, 0.55), rgba(91, 95, 199, 0) 70%);
+    filter: blur(40px);
+    pointer-events: none;
+}
+
+/* Generic app frame (OS-agnostic): screenshots are content-only captures,
+   the frame supplies the top bar and a stylized side rail */
+.app-frame {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #e9ecf1;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow:
+        0 40px 80px -20px rgba(0, 0, 0, 0.6),
+        0 20px 40px -10px rgba(91, 95, 199, 0.25);
+}
+
+.app-frame-bar {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    padding: 0 16px 0 34%;
+}
+
+.app-frame-search {
+    flex: 1;
+    max-width: 520px;
+    height: 20px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 18, 32, 0.08);
+}
+
+.app-frame-body {
+    display: flex;
+}
+
+.app-frame-rail {
+    flex: 0 0 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding-top: 18px;
+}
+
+.app-frame-rail > i {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    background: rgba(43, 52, 67, 0.12);
+}
+
+.app-frame-rail > i.is-active {
+    background: #7b83eb;
+}
+
+/* Activity bell (Teams activity feed) with notification badge */
+.app-frame-bell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    font-size: 15px;
+    color: #7b83eb;
+}
+
+.app-frame-bell i {
+    transform-origin: 50% 10%;
+}
+
+.app-frame-bell b {
+    position: absolute;
+    top: -7px;
+    right: -9px;
+    min-width: 15px;
+    height: 15px;
+    padding: 0 4px;
+    border-radius: 8px;
+    background: #c4314b;
+    box-shadow: 0 0 0 2px #e9ecf1;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 15px;
+    text-align: center;
+    transform: scale(0);
+}
+
+.feature-shot.is-active .app-frame-bell b {
+    animation: bellBadgePop 0.45s cubic-bezier(0.3, 1.6, 0.5, 1) 0.6s forwards;
+}
+
+.feature-shot.is-active .app-frame-bell i {
+    animation: bellRing 2.6s ease-in-out 0.8s 2;
+}
+
+@keyframes bellBadgePop {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes bellRing {
+    0%, 40%, 100% { transform: rotate(0); }
+    5% { transform: rotate(16deg); }
+    10% { transform: rotate(-14deg); }
+    15% { transform: rotate(10deg); }
+    20% { transform: rotate(-8deg); }
+    25% { transform: rotate(4deg); }
+    30% { transform: rotate(-2deg); }
+}
+
+.app-frame-screen {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    border-top: 1px solid #dde1e8;
+    border-left: 1px solid #dde1e8;
+    aspect-ratio: 5 / 3;
+    background: #fff;
+    overflow: hidden;
+}
+
+.feature-showcase-stage {
+    display: grid;
+    max-width: 860px;
+    margin-left: auto;
+}
+
+.feature-shot {
+    grid-area: 1 / 1;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+    transition: opacity 0.6s ease, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+    pointer-events: none;
+}
+
+.feature-shot.is-active {
+    opacity: 1;
+    transform: none;
+}
+
+/* Always fit the capture's width; any extra height is cropped at the bottom */
+.app-frame-screen img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Copilot demo: types a prompt into the captured input box, then highlights
+   the matching suggestion. Positions are % of the copilot.webp capture. */
+.copilot-demo {
+    position: relative;
+    container-type: inline-size;
+}
+
+.copilot-input {
+    position: absolute;
+    left: 26.74%;
+    top: 40.15%;
+    width: 50.2%;
+    height: 4.05%;
+    display: flex;
+    align-items: center;
+    padding-left: 0.4cqw;
+    background: #fff;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-size: 1.2cqw;
+    color: #242424;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.feature-shot.is-active .copilot-input {
+    opacity: 1;
+}
+
+.copilot-input [data-text] {
+    white-space: pre;
+}
+
+.copilot-mention {
+    color: #5b5fc7;
+    font-weight: 600;
+}
+
+.copilot-caret {
+    flex-shrink: 0;
+    width: 0.08cqw;
+    min-width: 1px;
+    height: 1.4cqw;
+    margin-left: 0.08cqw;
+    background: #242424;
+    animation: copilotCaret 1s steps(1) infinite;
+}
+
+.copilot-suggestion {
+    position: absolute;
+    left: 43.68%;
+    top: 52.77%;
+    width: 16.94%;
+    height: 14.51%;
+    border-radius: 1.5cqw;
+    box-shadow:
+        0 0 0 0.16cqw #7b83eb,
+        0 0 2.4cqw rgba(123, 131, 235, 0.45);
+    opacity: 0;
+    transform: scale(1.04);
+    transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 1);
+    pointer-events: none;
+}
+
+.copilot-suggestion.is-highlighted {
+    opacity: 1;
+    transform: none;
+}
+
+@keyframes copilotCaret {
+    50% { opacity: 0; }
+}
+
+.has-showcase .features-items .item {
+    position: relative;
+    padding-bottom: 14px;
+    cursor: pointer;
+    opacity: 0.55;
+    transition: opacity 0.3s ease;
+}
+
+.has-showcase .features-items .item:hover,
+.has-showcase .features-items .item.is-active {
+    opacity: 1;
+}
+
+.has-showcase .features-items .item:focus-visible {
+    outline: 2px solid #7b83eb;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.has-showcase .features-items .item::before,
+.has-showcase .features-items .item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    border-radius: 3px;
+}
+
+.has-showcase .features-items .item::before {
+    right: 0;
+    background: rgba(255, 255, 255, 0.12);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.has-showcase .features-items .item.is-active::before {
+    opacity: 1;
+}
+
+.has-showcase .features-items .item::after {
+    width: 0;
+    background: #7b83eb;
+}
+
+.has-showcase .features-items .item.is-active::after {
+    width: 100%;
+}
+
+.has-showcase.is-autoplay .features-items .item.is-active::after {
+    animation: featureProgress 10s linear forwards;
+    animation-play-state: paused;
+}
+
+.has-showcase.is-autoplay.is-visible:not(.is-hovered) .features-items .item.is-active::after {
+    animation-play-state: running;
+}
+
+@keyframes featureProgress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 
+@media (max-width: 767px) {
+    .feature-showcase {
+        padding: 20px 16px;
+    }
 
-.app-feature-content .features-items.extra .item .item-content .item-title {
-    color: #1e3a5f;
+    .app-frame {
+        border-radius: 10px;
+    }
+
+    .app-frame-bar {
+        height: 24px;
+        padding-left: 30%;
+    }
+
+    .app-frame-search {
+        height: 12px;
+        border-radius: 4px;
+    }
+
+    .app-frame-rail {
+        flex-basis: 26px;
+        gap: 8px;
+        padding-top: 10px;
+    }
+
+    .app-frame-rail > i {
+        width: 10px;
+        height: 10px;
+        border-radius: 3px;
+    }
+
+    .app-frame-bell {
+        width: 10px;
+        height: 10px;
+        font-size: 9px;
+    }
+
+    .app-frame-bell b {
+        top: -5px;
+        right: -7px;
+        min-width: 10px;
+        height: 10px;
+        padding: 0 2px;
+        font-size: 7px;
+        line-height: 10px;
+    }
+
 }
 
-.app-feature-content .features-items.extra .item .item-content .item-text {
-    color: #334155;
+@media (prefers-reduced-motion: reduce) {
+
+    .feature-shot {
+        transition: opacity 0.2s linear;
+        transform: none;
+    }
+
+    .feature-shot.is-active .app-frame-bell i {
+        animation: none;
+    }
+
+    .copilot-caret {
+        animation: none;
+    }
+
+    .feature-shot.is-active .app-frame-bell b {
+        animation: none;
+        transform: none;
+    }
 }
 
 .app-video-wrapp {

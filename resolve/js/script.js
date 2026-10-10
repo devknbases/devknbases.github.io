@@ -981,6 +981,117 @@ document.addEventListener("DOMContentLoaded", updateActiveLink);
   });
 })();
 
+// Screenshot showcases (#features, #features-extra)
+(function () {
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Copilot slide: type "@Resolve ..." into the input, then highlight the suggestion
+  function playCopilot(demo) {
+    stopCopilot(demo);
+    var parts = demo.querySelectorAll(".copilot-input [data-text]");
+    var suggestion = demo.querySelector(".copilot-suggestion");
+    if (reduceMotion) {
+      parts.forEach(function (el) {
+        el.textContent = el.getAttribute("data-text");
+      });
+      suggestion.classList.add("is-highlighted");
+      return;
+    }
+    var p = 0;
+    var c = 0;
+    function tick() {
+      if (p >= parts.length) {
+        demo._copilotTimer = setTimeout(function () {
+          suggestion.classList.add("is-highlighted");
+        }, 350);
+        return;
+      }
+      var text = parts[p].getAttribute("data-text");
+      parts[p].textContent = text.slice(0, ++c);
+      if (c >= text.length) {
+        p++;
+        c = 0;
+      }
+      demo._copilotTimer = setTimeout(tick, 45);
+    }
+    demo._copilotTimer = setTimeout(tick, 800);
+  }
+
+  function stopCopilot(demo) {
+    clearTimeout(demo._copilotTimer);
+    demo.querySelectorAll(".copilot-input [data-text]").forEach(function (el) {
+      el.textContent = "";
+    });
+    demo.querySelector(".copilot-suggestion").classList.remove("is-highlighted");
+  }
+
+  function initShowcase(section) {
+    var items = section.querySelectorAll(".features-items .item[data-shot]");
+    var shots = section.querySelectorAll(".feature-shot");
+
+    function activateShot(n) {
+      items.forEach(function (el) {
+        el.classList.toggle("is-active", parseInt(el.getAttribute("data-shot")) === n);
+      });
+      shots.forEach(function (el) {
+        var active = parseInt(el.getAttribute("data-shot")) === n;
+        el.classList.toggle("is-active", active);
+        var demo = el.querySelector(".copilot-demo");
+        if (demo) active ? playCopilot(demo) : stopCopilot(demo);
+      });
+    }
+
+    function stopAutoplay() {
+      section.classList.remove("is-autoplay");
+    }
+
+    if (!reduceMotion) section.classList.add("is-autoplay");
+
+    items.forEach(function (el) {
+      // The progress bar animation drives autoplay: when it ends, move on
+      el.addEventListener("animationend", function () {
+        if (!section.classList.contains("is-autoplay")) return;
+        var next = (parseInt(el.getAttribute("data-shot")) % items.length) + 1;
+        activateShot(next);
+      });
+      el.addEventListener("click", function () {
+        stopAutoplay();
+        activateShot(parseInt(el.getAttribute("data-shot")));
+      });
+      el.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          el.click();
+        }
+      });
+    });
+
+    // Pause only while reading the feature list, not while looking at the screenshot
+    var list = section.querySelector(".features-items");
+    list.addEventListener("mouseenter", function () {
+      section.classList.add("is-hovered");
+    });
+    list.addEventListener("mouseleave", function () {
+      section.classList.remove("is-hovered");
+    });
+
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(
+        function (entries) {
+          section.classList.toggle("is-visible", entries[0].isIntersecting);
+        },
+        { threshold: 0.4 }
+      ).observe(section);
+    } else {
+      section.classList.add("is-visible");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".has-showcase").forEach(initShowcase);
+  });
+})();
+
 // Opcionalmente, si quieres que funcione también con el desplazamiento
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
