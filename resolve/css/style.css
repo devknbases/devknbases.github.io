@@ -16325,12 +16325,13 @@ button:hover .HoverArrow__tipPath {
 .app-frame-bar {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 38px;
-    padding: 0 16px 0 34%;
+    padding: 0 16px;
 }
 
 .app-frame-search {
-    flex: 1;
+    flex: 0 1 45%;
     max-width: 520px;
     height: 20px;
     border-radius: 6px;
@@ -16530,11 +16531,35 @@ button:hover .HoverArrow__tipPath {
     50% { opacity: 0; }
 }
 
+/* Jira slide: the issue dialog pops in over the (pre-blurred) incident view.
+   Positions are % of the jira-app.webp capture. */
+.jira-demo {
+    position: relative;
+}
+
+.jira-demo .jira-dialog {
+    position: absolute;
+    left: 26%;
+    top: 15.7%;
+    width: 48%;
+    border-radius: 8px;
+    box-shadow: 0 18px 40px -8px rgba(0, 18, 32, 0.35);
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+    transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.feature-shot.is-active .jira-demo .jira-dialog {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.9s;
+}
+
 .has-showcase .features-items .item {
     position: relative;
-    padding-bottom: 14px;
+    padding: 8px 0;
     cursor: pointer;
-    opacity: 0.55;
+    opacity: 0.4;
     transition: opacity 0.3s ease;
 }
 
@@ -16543,40 +16568,47 @@ button:hover .HoverArrow__tipPath {
     opacity: 1;
 }
 
+.has-showcase .features-items .item:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.has-showcase .features-items .item .item-content .item-title {
+    margin: 0;
+}
+
+/* Only the active item shows its description */
+.has-showcase .features-items .item .item-content .item-text {
+    max-height: 0;
+    margin: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease, opacity 0.3s ease;
+}
+
+.has-showcase .features-items .item.is-active .item-content .item-text {
+    max-height: 220px;
+    margin-top: 6px;
+    opacity: 1;
+    transition: max-height 0.45s ease, opacity 0.4s ease 0.15s;
+}
+
 .has-showcase .features-items .item:focus-visible {
     outline: 2px solid #7b83eb;
     outline-offset: 4px;
     border-radius: 4px;
 }
 
-.has-showcase .features-items .item::before,
+/* Invisible timer: its animation still drives autoplay (see script.js),
+   but there's no visible countdown rushing the reader */
 .has-showcase .features-items .item::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 3px;
-    border-radius: 3px;
-}
-
-.has-showcase .features-items .item::before {
-    right: 0;
-    background: rgba(255, 255, 255, 0.12);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.has-showcase .features-items .item.is-active::before {
-    opacity: 1;
-}
-
-.has-showcase .features-items .item::after {
     width: 0;
-    background: #7b83eb;
-}
-
-.has-showcase .features-items .item.is-active::after {
-    width: 100%;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .has-showcase.is-autoplay .features-items .item.is-active::after {
@@ -16610,7 +16642,6 @@ button:hover .HoverArrow__tipPath {
 
     .app-frame-bar {
         height: 24px;
-        padding-left: 30%;
     }
 
     .app-frame-search {
@@ -16661,6 +16692,12 @@ button:hover .HoverArrow__tipPath {
 
     .copilot-caret {
         animation: none;
+    }
+
+    .jira-demo .jira-dialog,
+    .has-showcase .features-items .item .item-content .item-text {
+        transition: none;
+        transform: none;
     }
 
     .feature-shot.is-active .app-frame-bell b {

@@ -1068,6 +1068,23 @@ document.addEventListener("DOMContentLoaded", updateActiveLink);
 
     // Pause only while reading the feature list, not while looking at the screenshot
     var list = section.querySelector(".features-items");
+
+    // Reserve room for the longest description so the list doesn't resize as items open
+    function lockListHeight() {
+      var texts = list.querySelectorAll(".item-text");
+      var open = list.querySelector(".item.is-active .item-text");
+      if (!open) return;
+      list.style.minHeight = "";
+      var tallest = 0;
+      texts.forEach(function (el) {
+        tallest = Math.max(tallest, el.scrollHeight);
+      });
+      list.style.minHeight = list.offsetHeight - open.offsetHeight + tallest + "px";
+    }
+    lockListHeight();
+    window.addEventListener("load", lockListHeight);
+    window.addEventListener("resize", lockListHeight);
+
     list.addEventListener("mouseenter", function () {
       section.classList.add("is-hovered");
     });
